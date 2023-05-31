@@ -1,5 +1,7 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 :root {
-  --background-color: white;
+  --background-color: #FAFBFC;
   --color-1: rgba(47, 53, 58);
   --color-2: rgba(196, 174, 153);
   --color-3: rgba(255, 255, 240);
@@ -13,11 +15,12 @@
 }
 
 body{
-  background-color: var(--color-7);
   margin: 0 0;
   font-family: sans-serif;
 }
 
 html {
+  background-color: var(--background-color);
   height: 100%;
 }
+
