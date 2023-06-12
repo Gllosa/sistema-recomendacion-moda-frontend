@@ -13,7 +13,8 @@ const Home = () => {
           Obtener Recomendación
         </Typography>
         <Typography variant="body1">
-          Sube una imagen e indica cuantas recomendaciones quieres y cuales son los atributos más importantes.
+          Sube una imagen e indica cuantas recomendaciones quieres y cuales son
+          los atributos más importantes.
         </Typography>
         <MyStepper />
       </Container>

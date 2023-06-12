@@ -10,8 +10,8 @@ import { useState } from "react";
 import { Alert, LinearProgress, Paper, Slider, Snackbar } from "@mui/material";
 import { getRecomendations } from "@/app/services";
 import { getImageUrl } from "@/app/utils";
-// import "~react-image-gallery/styles/scss/image-gallery.scss";
 import ImageGallery from "react-image-gallery";
+import AttributesSelector from "../AttributesSelector/AttributesSelector";
 
 const steps = [
   "Sube una imagen",
@@ -68,11 +68,7 @@ export default function MyStepper() {
 
   const stepsMapper = (stepNumber: number) => {
     if (stepNumber == 0) {
-      return (
-        <Box sx={{ margin: "0 auto", width: 500 }}>
-          <ImageUploader file={file} setFile={setFile} />;
-        </Box>
-      );
+      return <ImageUploader file={file} setFile={setFile}/>;
     }
     if (stepNumber == 1) {
       return (
@@ -96,7 +92,7 @@ export default function MyStepper() {
         </Paper>
       );
     }
-    return <h1>Hola</h1>;
+    return <AttributesSelector />;
   };
 
   return (
@@ -125,16 +121,18 @@ export default function MyStepper() {
       </Stepper>
       <Box mt="2rem">
         {activeStep === steps.length ? (
-          <Box sx={{ height: "20rem" }}>
+          <Box>
             {!loading ? (
-              <ImageGallery
-                items={recomendations.map((id) => {
-                  return {
-                    original: getImageUrl(id),
-                    thumbnail: getImageUrl(id),
-                  };
-                })}
-              />
+              // <Box sx={{ width: "300px", mx: "auto"}}>
+                <ImageGallery
+                  items={recomendations.map((id) => {
+                    return {
+                      original: getImageUrl(id),
+                      thumbnail: getImageUrl(id)
+                    };
+                  })}
+                />
+              // </Box>
             ) : (
               <Box sx={{ width: "100%" }}>
                 <LinearProgress />
