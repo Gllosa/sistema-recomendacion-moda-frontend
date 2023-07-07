@@ -8,16 +8,25 @@ import Typography from "@mui/material/Typography";
 import ImageUploader from "../ImageUploader/ImageUploader";
 import { useState } from "react";
 import { Alert, LinearProgress, Paper, Slider, Snackbar } from "@mui/material";
-import { getRecomendations } from "@/app/services";
+import { getRecomendations } from "@/app/services/services";
 import { getImageUrl } from "@/app/utils";
 import ImageGallery from "react-image-gallery";
 import AttributesSelector from "../AttributesSelector/AttributesSelector";
+import { SelectedAttributtes } from "@/app/services/services.interfaces";
 
 const steps = [
   "Sube una imagen",
   "Elige el número de recomendaciones",
   "Elige los atributos indispensables",
 ];
+
+const defaultSelectedAttributes: SelectedAttributtes = {
+  135: false,
+  136: false,
+  146: false,
+  115: false,
+  317: false,
+};
 
 export default function MyStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -26,6 +35,9 @@ export default function MyStepper() {
   const [noImageError, setNoImageError] = useState(false);
   const [recomendationsNumber, setRecomendationsNumber] = useState<number>(4);
   const [loading, setLoading] = useState(false);
+  const [selectedAttributes, setSelectedAttributes] = useState(
+    defaultSelectedAttributes
+  );
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -43,6 +55,7 @@ export default function MyStepper() {
     setRecomendations([]);
     setFile(null);
     setRecomendationsNumber(4);
+    setSelectedAttributes(defaultSelectedAttributes);
   };
 
   const handleClose = (
@@ -61,14 +74,18 @@ export default function MyStepper() {
       return;
     }
     setLoading(true);
-    const res = await getRecomendations(file, recomendationsNumber);
+    const res = await getRecomendations(
+      file,
+      recomendationsNumber,
+      selectedAttributes
+    );
     setLoading(false);
     setRecomendations(res);
   };
 
   const stepsMapper = (stepNumber: number) => {
     if (stepNumber == 0) {
-      return <ImageUploader file={file} setFile={setFile}/>;
+      return <ImageUploader file={file} setFile={setFile} />;
     }
     if (stepNumber == 1) {
       return (
@@ -92,7 +109,12 @@ export default function MyStepper() {
         </Paper>
       );
     }
-    return <AttributesSelector />;
+    return (
+      <AttributesSelector
+        selectedAttributes={selectedAttributes}
+        setSelectedAttributes={setSelectedAttributes}
+      />
+    );
   };
 
   return (
@@ -123,16 +145,15 @@ export default function MyStepper() {
         {activeStep === steps.length ? (
           <Box>
             {!loading ? (
-              // <Box sx={{ width: "300px", mx: "auto"}}>
-                <ImageGallery
-                  items={recomendations.map((id) => {
-                    return {
-                      original: getImageUrl(id),
-                      thumbnail: getImageUrl(id)
-                    };
-                  })}
-                />
-              // </Box>
+              <ImageGallery
+              showBullets
+                items={recomendations.map((id) => {
+                  return {
+                    original: getImageUrl(id),
+                    thumbnail: getImageUrl(id)
+                  };
+                })}
+              />
             ) : (
               <Box sx={{ width: "100%" }}>
                 <LinearProgress />

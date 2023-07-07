@@ -1,1 +1,1 @@
-export const API_URL = 'http://visiona12.sicamvisiona.com:5000/'
+export const API_URL = false ? 'http://visiona12.sicamvisiona.com:5000/' : 'http://localhost:5000/'

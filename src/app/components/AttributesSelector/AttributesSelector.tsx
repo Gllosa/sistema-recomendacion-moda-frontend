@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import {
   Paper,
   Switch,
@@ -11,19 +11,26 @@ import {
   Grid,
 } from "@mui/material";
 import { ChangeEvent } from "react";
+import { SelectedAttributtes } from "@/app/services/services.interfaces";
 
-const AttributesSelector = () => {
-  const attributes = {
-    atributo1: false,
-    atributo2: false,
-    atributo3: false,
-    atributo4: false,
-    atributo5: false,
-    atributo6: false,
-  };
+const attributtes = {
+  135: "Silhueta ajustada",
+  136: "Silhueta normal",
+  115: "Silhueta simetrica",
+  146: "Largo por encima de la cadera",
+  317: "Sin estampado",
+};
 
+type AttributesSelectorType = {
+  selectedAttributes: SelectedAttributtes;
+  setSelectedAttributes: Dispatch<SetStateAction<SelectedAttributtes>>;
+};
+
+const AttributesSelector = ({
+  selectedAttributes,
+  setSelectedAttributes,
+}: AttributesSelectorType) => {
   const [selectAttributes, setSelectAttribute] = useState(true);
-  const [selectedAttributes, setSelectedAttributes] = useState(attributes);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedAttributes({
@@ -53,26 +60,30 @@ const AttributesSelector = () => {
             disabled={selectAttributes}
           >
             <FormLabel component="legend">
-              Elige los campos más importantes
+              Elige los atributos más importantes
             </FormLabel>
             <FormGroup>
               <Grid container>
-                {Object.keys(attributes).map((attributeName) => {
+                {Object.keys(attributtes).map((attributeId) => {
                   return (
-                    <Grid item key={attributeName} xs={6} md={4}>
+                    <Grid item key={attributeId} xs={6} md={4}>
                       <FormControlLabel
                         control={
                           <Checkbox
                             checked={
                               selectedAttributes[
-                                attributeName as keyof typeof selectedAttributes
+                                attributeId as unknown as keyof SelectedAttributtes
                               ]
                             }
                             onChange={handleChange}
-                            name={attributeName}
+                            name={attributeId}
                           />
                         }
-                        label={attributeName}
+                        label={
+                          attributtes[
+                            attributeId as unknown as keyof SelectedAttributtes
+                          ]
+                        }
                       />
                     </Grid>
                   );
