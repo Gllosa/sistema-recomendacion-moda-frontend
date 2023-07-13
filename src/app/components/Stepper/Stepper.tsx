@@ -11,8 +11,9 @@ import { Alert, LinearProgress, Paper, Slider, Snackbar } from "@mui/material";
 import { getRecomendations } from "@/app/services/services";
 import { getImageUrl } from "@/app/utils";
 import ImageGallery from "react-image-gallery";
-import AttributesSelector from "../AttributesSelector/AttributesSelector";
-import { SelectedAttributtes } from "@/app/services/services.interfaces";
+import { SelectedAttributes } from "@/app/services/services.interfaces";
+import AttributesSearch from "../AttributesSearch/AttributesSearch";
+import labelDescriptions from "../../label_descriptions.json";
 
 const steps = [
   "Sube una imagen",
@@ -20,19 +21,16 @@ const steps = [
   "Elige los atributos indispensables",
 ];
 
-const defaultSelectedAttributes: SelectedAttributtes = {
-  135: false,
-  136: false,
-  146: false,
-  115: false,
-  317: false,
-};
+const { attributes } = labelDescriptions;
+const defaultSelectedAttributes: SelectedAttributes = Object.fromEntries(
+  attributes.map((item) => [item.id, { name: item.name, checked: false }])
+);
 
 export default function MyStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [recomendations, setRecomendations] = useState<string[]>([]);
   const [file, setFile] = useState<File | null>(null);
-  const [noImageError, setNoImageError] = useState(false);
+  const [noResultsError, setNoResultsError] = useState(false);
   const [recomendationsNumber, setRecomendationsNumber] = useState<number>(4);
   const [loading, setLoading] = useState(false);
   const [selectedAttributes, setSelectedAttributes] = useState(
@@ -57,7 +55,6 @@ export default function MyStepper() {
     setRecomendationsNumber(4);
     setSelectedAttributes(defaultSelectedAttributes);
   };
-
   const handleClose = (
     event?: React.SyntheticEvent | Event,
     reason?: string
@@ -65,12 +62,11 @@ export default function MyStepper() {
     if (reason === "clickaway") {
       return;
     }
-    setNoImageError(false);
+    setNoResultsError(false);
   };
 
   const processInput = async () => {
     if (!file) {
-      setNoImageError(true);
       return;
     }
     setLoading(true);
@@ -81,6 +77,9 @@ export default function MyStepper() {
     );
     setLoading(false);
     setRecomendations(res);
+    if (res.length === 0) {
+      setNoResultsError(true);
+    }
   };
 
   const stepsMapper = (stepNumber: number) => {
@@ -94,9 +93,9 @@ export default function MyStepper() {
             Numero de recomendaciones: {recomendationsNumber}
           </Typography>
           <Slider
-            aria-label="Temperature"
+            aria-label="recommendations"
             defaultValue={4}
-            getAriaValueText={(value) => "" + value}
+            getAriaValueText={(value) => value.toString()}
             valueLabelDisplay="auto"
             step={1}
             marks
@@ -110,7 +109,7 @@ export default function MyStepper() {
       );
     }
     return (
-      <AttributesSelector
+      <AttributesSearch
         selectedAttributes={selectedAttributes}
         setSelectedAttributes={setSelectedAttributes}
       />
@@ -118,16 +117,7 @@ export default function MyStepper() {
   };
 
   return (
-    <Box sx={{ width: "100%", height: "100%", my: "4rem" }}>
-      <Snackbar
-        open={noImageError}
-        autoHideDuration={2000}
-        onClose={handleClose}
-      >
-        <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
-          No has añadido ninguna imagen
-        </Alert>
-      </Snackbar>
+    <Box sx={{ my: "4rem" }}>
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps: { completed?: boolean } = {};
@@ -136,7 +126,9 @@ export default function MyStepper() {
           } = {};
           return (
             <Step key={label} {...stepProps}>
-              <StepLabel {...labelProps}>{label}</StepLabel>
+              <StepLabel {...labelProps} style={{ wordBreak: "break-all" }}>
+                {label}
+              </StepLabel>
             </Step>
           );
         })}
@@ -145,15 +137,33 @@ export default function MyStepper() {
         {activeStep === steps.length ? (
           <Box>
             {!loading ? (
-              <ImageGallery
-              showBullets
-                items={recomendations.map((id) => {
-                  return {
-                    original: getImageUrl(id),
-                    thumbnail: getImageUrl(id)
-                  };
-                })}
-              />
+              recomendations.length > 0 ? (
+                <ImageGallery
+                  showBullets
+                  items={recomendations.map((id) => {
+                    return {
+                      original: getImageUrl(id),
+                      thumbnail: getImageUrl(id),
+                    };
+                  })}
+                />
+              ) : (
+                <Snackbar
+                  anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
+                  open={noResultsError}
+                  autoHideDuration={null}
+                  onClose={handleClose}
+                >
+                  <Alert
+                    onClose={handleClose}
+                    severity="error"
+                    sx={{ width: "100%" }}
+                  >
+                    No hemos encontrado imágenes, con tantos atributos, que sean
+                    parecidas a la tuya, prueba con menos atributos.
+                  </Alert>
+                </Snackbar>
+              )
             ) : (
               <Box sx={{ width: "100%" }}>
                 <LinearProgress />

@@ -1,8 +1,26 @@
+export interface Attr {
+  name: string
+  checked: boolean
+}
 
-export interface SelectedAttributtes {
-  135: boolean
-  136: boolean
-  146: boolean
-  115: boolean
-  317: boolean
+export interface LabelDescriptions {
+  categories: Attribute[];
+  attributes: Attribute[];
+}
+
+export interface Attribute {
+  id: number;
+  name: string;
+  supercategory: string;
+  level: number;
+}
+
+export interface AttributesName {
+  id: number;
+  name: string
+}
+
+
+export interface SelectedAttributes {
+  [id: number]: Attr
 }

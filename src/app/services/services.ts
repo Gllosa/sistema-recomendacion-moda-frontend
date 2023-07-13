@@ -1,23 +1,23 @@
 import axios from "axios";
 import { API_URL } from "../constants";
-import { SelectedAttributtes } from "./services.interfaces";
+import { SelectedAttributes } from "./services.interfaces";
 
 export const getRecomendations = async (
   file: File,
   recomendationsNumber: number,
-  selectedAttributtes: SelectedAttributtes = {
-    135: false,
-    136: false,
-    146: false,
-    115: false,
-    317: false,
-  }
+  selectedAttributtes: SelectedAttributes
 ): Promise<string[]> => {
   const formData = new FormData();
   formData.append("file", file);
   formData.append("recomendationsNumber", recomendationsNumber.toString());
 
-  formData.append("selectedAttributtes", JSON.stringify(selectedAttributtes))
+  const selAttr = Object.fromEntries(
+    Object.entries(selectedAttributtes)
+      .filter(([id, value]) => value.checked)
+      .map(([id]) => [id, true])
+  );
+
+  formData.append("selectedAttributtes", JSON.stringify(selAttr));
 
   const response = await axios.post(`${API_URL}/recommendations`, formData);
 

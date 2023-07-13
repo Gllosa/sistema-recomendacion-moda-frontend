@@ -1,94 +1,97 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import {
   Paper,
-  Switch,
+  List,
   FormControlLabel,
   FormGroup,
   FormControl,
-  FormLabel,
   Checkbox,
-  Divider,
   Grid,
 } from "@mui/material";
 import { ChangeEvent } from "react";
-import { SelectedAttributtes } from "@/app/services/services.interfaces";
-
-const attributtes = {
-  135: "Silhueta ajustada",
-  136: "Silhueta normal",
-  115: "Silhueta simetrica",
-  146: "Largo por encima de la cadera",
-  317: "Sin estampado",
-};
+import { SelectedAttributes } from "@/app/services/services.interfaces";
 
 type AttributesSelectorType = {
-  selectedAttributes: SelectedAttributtes;
-  setSelectedAttributes: Dispatch<SetStateAction<SelectedAttributtes>>;
+  selectedAttributes: SelectedAttributes;
+  setSelectedAttributes: Dispatch<SetStateAction<SelectedAttributes>>;
+  selectAttributes: boolean;
+  search: string;
 };
 
 const AttributesSelector = ({
   selectedAttributes,
   setSelectedAttributes,
+  selectAttributes,
+  search,
 }: AttributesSelectorType) => {
-  const [selectAttributes, setSelectAttribute] = useState(true);
-
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSelectedAttributes({
+    const id = parseInt(event.target.name);
+    const updatedAttributes = {
       ...selectedAttributes,
-      [event.target.name]: event.target.checked,
-    });
+      [id]: { ...selectedAttributes[id], checked: event.target.checked },
+    };
+    setSelectedAttributes(updatedAttributes);
   };
+
+  const [filteredAttributes, setFilteredAtributes] =
+    useState(selectedAttributes);
+
+  useEffect(() => {
+    if (search === "") {
+      setFilteredAtributes(selectedAttributes);
+    }
+    const newAttr = Object.fromEntries(
+      Object.entries(selectedAttributes).filter(([id, value]) =>
+        value.name.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+    setFilteredAtributes(newAttr);
+  }, [search, selectedAttributes]);
 
   return (
     <>
       <Paper elevation={3} sx={{ p: "2rem 2rem" }}>
         <FormGroup>
-          <FormControlLabel
-            control={
-              <Switch
-                defaultChecked
-                onChange={() => setSelectAttribute(!selectAttributes)}
-              />
-            }
-            label="Dame resultados de todo tipo"
-          />
-          <Divider />
           <FormControl
             sx={{ m: 3 }}
             component="fieldset"
             variant="standard"
-            disabled={selectAttributes}
+            disabled={!selectAttributes}
           >
-            <FormLabel component="legend">
-              Elige los atributos más importantes
-            </FormLabel>
             <FormGroup>
-              <Grid container>
-                {Object.keys(attributtes).map((attributeId) => {
-                  return (
-                    <Grid item key={attributeId} xs={6} md={4}>
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            checked={
-                              selectedAttributes[
-                                attributeId as unknown as keyof SelectedAttributtes
-                              ]
+              <List
+                sx={{
+                  width: "100%",
+                  maxWidth: "100%",
+                  bgcolor: "background.paper",
+                  position: "relative",
+                  overflow: "auto",
+                  maxHeight: 300,
+                  "& ul": { padding: 0 },
+                }}
+                subheader={<li />}
+              >
+                <Grid container>
+                  {Object.entries(filteredAttributes).map(
+                    ([id, { checked, name }]) => {
+                      return (
+                        <Grid item key={id} xs={6} md={4} lg={3}>
+                          <FormControlLabel
+                            control={
+                              <Checkbox
+                                checked={checked}
+                                onChange={handleChange}
+                                name={id.toString()}
+                              />
                             }
-                            onChange={handleChange}
-                            name={attributeId}
+                            label={name}
                           />
-                        }
-                        label={
-                          attributtes[
-                            attributeId as unknown as keyof SelectedAttributtes
-                          ]
-                        }
-                      />
-                    </Grid>
-                  );
-                })}
-              </Grid>
+                        </Grid>
+                      );
+                    }
+                  )}
+                </Grid>
+              </List>
             </FormGroup>
           </FormControl>
         </FormGroup>
