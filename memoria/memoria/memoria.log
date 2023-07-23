@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.8)  22 JUL 2023 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.8)  23 JUL 2023 10:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -964,7 +964,7 @@ File: t1txss.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 245.
-<imagenes//Portada_Logo.png, id=14, 456.2865pt x 45.99pt>
+<imagenes//Portada_Logo.png, id=22, 456.2865pt x 45.99pt>
 File: imagenes//Portada_Logo.png Graphic file (type png)
 <use imagenes//Portada_Logo.png>
 Package pdftex.def Info: imagenes//Portada_Logo.png  used on input line 249.
@@ -977,7 +977,7 @@ LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 23.63593pt on input line 260.
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 19.70294pt on input line 264.
-<imagenes/creativecommons.png, id=16, 338.76563pt x 118.19156pt>
+<imagenes/creativecommons.png, id=24, 338.76563pt x 118.19156pt>
 File: imagenes/creativecommons.png Graphic file (type png)
 <use imagenes/creativecommons.png>
 Package pdftex.def Info: imagenes/creativecommons.png  used on input line 276.
@@ -1037,18 +1037,41 @@ LaTeX Info: Redefining \% on input line 1.
 
 ] [12]
 Cap\'{\i }tulo 1.
-[1
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 368.
+(c:/texlive/2022/texmf-dist/tex/latex/txfonts/ot1txr.fd
+File: ot1txr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 368.
+ (c:/texlive/2022/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 368.
+ (c:/texlive/2022/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 368.
+ (c:/texlive/2022/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 368.
+ (c:/texlive/2022/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+) [1
 
 
 ]
-Package csquotes Info: Disabling multilingual quotes on input line 376.
+
+LaTeX Warning: Citation 'imaterialist' on page 2 undefined on input line 403.
+
+[2]
+Package csquotes Info: Disabling multilingual quotes on input line 413.
 
 
 Package csquotes Warning: Quote style 'british/english' not defined.
-(csquotes)                Ignoring command on input line 376.
+(csquotes)                Ignoring command on input line 413.
 
 
-LaTeX Warning: Empty bibliography on input line 377.
+LaTeX Warning: Empty bibliography on input line 414.
 
 
 Package caption Warning: Unused \captionsetup[table] on input line 127.
@@ -1063,24 +1086,32 @@ LaTeX Info: Redefining \sptext on input line 23.
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 39C49120D5E97F0F3045F59B518465F2;127.
+(rerunfilecheck)             Checksum: 723D33EC45381AAB5BA831406B64966C;228.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                memoria
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'memoria.run.xml'.
 \openout1 = `memoria.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28144 strings out of 474971
- 466513 string characters out of 5780121
- 1225703 words of memory out of 5000000
- 49239 multiletter control sequences out of 15000+600000
- 503508 words of font info for 59 fonts, out of 8000000 for 9000
+ 28450 strings out of 474971
+ 471962 string characters out of 5780121
+ 1229737 words of memory out of 5000000
+ 49517 multiletter control sequences out of 15000+600000
+ 513435 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,11n,93p,1095b,2379s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/txfonts/rtxsc.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on memoria.pdf (13 pages, 107532 bytes).
+Output written on memoria.pdf (14 pages, 120051 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 39 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 55 words of extra memory for PDF output out of 10000 (max. 10000000)
 

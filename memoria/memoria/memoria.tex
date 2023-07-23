@@ -362,14 +362,51 @@ hmargin=3cm
 \chapter{Introducción}
 
 	% COMENZAR A ESCRIBIR EL TRABAJO
-	\section{Motivación del trabajo}
-	
+	\section{Motivación}
+	La industria de la moda siempre ha sido una de las más potentes en nuestra sociedad. 
+	Esta industria se ha ido adaptando al auge que han tenido las tecnologías informáticas
+	y es que, en el año 2022, las ventas de ropa online supusieron el 21,1\% de las ventas
+	totales en nuestro país. Es aquí donde entran en juego los sistemas de recomendación.
+	Un sistema de recomendación de moda permite ayudar a las personas a encontrar prendas
+	que se ajusten a sus gustos. 
+	Los clientes pueden mejorar su experiencia de compra y estar satisfechos con sus elecciones 
+	al recibir recomendaciones personalizadas y precisas. Esto resulta en un aumento
+	de las ventas de los sitios web que se dedican a la moda.
+	Un sistema de recomendación que esté basado únicamente en imágenes es útil, pero el hecho de
+	introducir la posibilidad de especificar los atributos que deben estar en las prendas lo mejora
+	aún más. El hecho de permitir a los usuarios obtener recomendaciones les ahorra mucho tiempo en búsquedas
+	que, muchas veces, pueden resultar tediosa.
+
+	En conclusión, el hecho de crear un sistema de recomendación de moda basado en atributos multimodales
+	resulta muy interesante tanto para propietarios de tiendas online, ya que mejoran sus ventas, como para
+	usuarios, que tienen más facilidad a la hora de encontrar las prendas que buscan, ahorrando así una
+	gran cantidad de tiempo.
+
+	\section{Objetivos}
+	El objetivo de este trabajo es el de crear una interfaz web que sea capaz de recomendar imágenes de
+	ropa, con una cierta similitud, a partir de otra previamente dada por el usuario. Además se podrán 
+	especificar los atributos que se desean en las imágenes de salida (por ejemplo: manga larga, ajuste suelto, etc.).
+	\\
+	Siendo este el principal objetivo podemos diferenciar los siguientes subobjetivos:
+	\begin{itemize}
+		\item Desarrollar un modelo de inteligencia artificial que sea capaz de recomendar imágenes en base a atributos multimodalaes y otra imagen.
+		\item Etiquetar las imágenes a utilizar con sus respectivos atributos.
+		\item Crear una API que sea permita la comunicación entre el modelo previamente mencionado y una interfaz.
+		\item Diseñar una interfaz intuitiva que permita a los usuarios cargar una imagen, seleccionar los atributos de interés y visualizar los resultados proporcionados por el modelo.
+	\end{itemize}
+
+	Estos objetivos pretenden resolver el problema planteado, derivando en una interfaz gráfica web
+	que sea capaz de brindar a los usuarios la capacidad de obtener recomendaciones de prendas 
+	de ropa a partir de ropa que les guste y de los atributos que consideren. 
+	\section{Marco regulador}
+	Para la realización del trabajo se hace uso de un conjunto de imágenes de la competición 
+	iMaterialist (Fashion) 2020 at FGVC7. \cite{imaterialist}
 
 %----------
 %	BIBLIOGRAFÍA
 %----------	
 
-%\nocite{*} % Si quieres que aparezcan en la bibliografía todos los documentos que la componen (también los que no estén citados en el texto) descomenta está lína
+\nocite{*} % Si quieres que aparezcan en la bibliografía todos los documentos que la componen (también los que no estén citados en el texto) descomenta está lína
 
 \clearpage
 \addcontentsline{toc}{chapter}{Bibliografía}

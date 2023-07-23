@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.0 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -34,7 +34,7 @@
       \strng{authornamehash}{909e100334bb25c3a7257abbfb0f49be}
       \strng{authorfullhash}{909e100334bb25c3a7257abbfb0f49be}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SA Pharmaceutical Journal}
@@ -42,7 +42,6 @@
       \field{title}{Lorem ipsum parem considerabit - Professional peer review}
       \field{volume}{80}
       \field{year}{2013}
-      \true{nocite}
       \field{pages}{6}
       \range{pages}{1}
     \endentry
@@ -72,13 +71,12 @@
       \strng{authornamehash}{8c1a819f6be43d56d86ca5c17d5fbe1b}
       \strng{authorfullhash}{8c1a819f6be43d56d86ca5c17d5fbe1b}
       \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
       \field{title}{Balsamiq wireframes quickstart guide}
       \field{year}{2012}
-      \true{nocite}
     \endentry
     \entry{schmitt}{book}{}
       \name{author}{1}{}{%
@@ -101,13 +99,12 @@
       \strng{authornamehash}{58321ba703f5fc9807d2211408b32f6c}
       \strng{authorfullhash}{58321ba703f5fc9807d2211408b32f6c}
       \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
       \field{title}{CSS Cookbook}
       \field{year}{2004}
-      \true{nocite}
     \endentry
     \entry{purewal}{book}{}
       \name{author}{1}{}{%
@@ -130,13 +127,12 @@
       \strng{authornamehash}{e103d089e99c86511f1a3d00cf1dcaca}
       \strng{authorfullhash}{e103d089e99c86511f1a3d00cf1dcaca}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
       \field{title}{Learning web app development}
       \field{year}{2014}
-      \true{nocite}
     \endentry
     \entry{mcfarland}{book}{}
       \name{author}{1}{}{%
@@ -159,13 +155,12 @@
       \strng{authornamehash}{2e55df330b8abbd6963ffc4d29e86b8a}
       \strng{authorfullhash}{2e55df330b8abbd6963ffc4d29e86b8a}
       \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
       \field{title}{CSS: the missing manual}
       \field{year}{2006}
-      \true{nocite}
     \endentry
     \entry{hiitola}{book}{}
       \name{author}{2}{}{%
@@ -192,8 +187,8 @@
       \strng{authorbibnamehash}{e014028cd9d7107c81d4e6fcc0bd5441}
       \strng{authornamehash}{e014028cd9d7107c81d4e6fcc0bd5441}
       \strng{authorfullhash}{e014028cd9d7107c81d4e6fcc0bd5441}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -225,8 +220,8 @@
       \strng{authorbibnamehash}{744d5be443b945e0fbf204131ad39afd}
       \strng{authornamehash}{744d5be443b945e0fbf204131ad39afd}
       \strng{authorfullhash}{744d5be443b945e0fbf204131ad39afd}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{James Baldwin Review}
@@ -252,8 +247,8 @@
       \strng{authorbibnamehash}{cae52cef91eabab40ec1acf0f3735097}
       \strng{authornamehash}{cae52cef91eabab40ec1acf0f3735097}
       \strng{authorfullhash}{cae52cef91eabab40ec1acf0f3735097}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Salutem Scientia Spiritus}
@@ -292,7 +287,7 @@
       \strng{authornamehash}{71d500408f9a4e53bc2b8bef8991c76d}
       \strng{authorfullhash}{71d500408f9a4e53bc2b8bef8991c76d}
       \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Navigation design and SEO for content-intensive websites: a guide for an efficient digital communication}
@@ -319,7 +314,7 @@
       \strng{authornamehash}{35335e4af463a023950b692846c0c6e0}
       \strng{authorfullhash}{35335e4af463a023950b692846c0c6e0}
       \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Cartographic Perspectives}
@@ -351,8 +346,8 @@
       \strng{authorbibnamehash}{6941bb37aad4e0d30b7f463e67dbd287}
       \strng{authornamehash}{6941bb37aad4e0d30b7f463e67dbd287}
       \strng{authorfullhash}{6941bb37aad4e0d30b7f463e67dbd287}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{LaTeX: una imprenta en sus manos}
