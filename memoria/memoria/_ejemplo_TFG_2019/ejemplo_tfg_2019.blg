@@ -1,16 +1,14 @@
-[0] Config.pm:306> INFO - This is Biber 2.18
-[0] Config.pm:309> INFO - Logfile is 'ejemplo_tfg_2019.blg'
-[138] biber-MSWIN32:340> INFO - === 
-[197] Biber.pm:418> INFO - Reading 'ejemplo_tfg_2019.bcf'
-[364] Biber.pm:975> INFO - Using all citekeys in bib section 0
-[387] Biber.pm:4401> INFO - Processing section 0
-[404] Biber.pm:4592> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
-[489] bibtex.pm:1713> INFO - LaTeX decoding ...
-[524] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
-[530] Utils.pm:410> ERROR - Name "Christine Kaeser-Chen, david shi, Maggie, Menglin Jia, Mihail Sirotenko, Will Cukierski" has too many commas, skipping entry 'imaterialist'
-[644] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[645] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[645] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[655] bbl.pm:654> INFO - Writing 'ejemplo_tfg_2019.bbl' with encoding 'UTF-8'
-[662] bbl.pm:757> INFO - Output to ejemplo_tfg_2019.bbl
-[663] Biber.pm:135> INFO - ERRORS: 1
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'ejemplo_tfg_2019.blg'
+[115] biber-MSWIN64:340> INFO - === 
+[152] Biber.pm:419> INFO - Reading 'ejemplo_tfg_2019.bcf'
+[281] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[299] Biber.pm:4419> INFO - Processing section 0
+[312] Biber.pm:4610> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
+[365] bibtex.pm:1713> INFO - LaTeX decoding ...
+[387] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
+[498] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[498] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[498] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[515] bbl.pm:660> INFO - Writing 'ejemplo_tfg_2019.bbl' with encoding 'UTF-8'
+[519] bbl.pm:763> INFO - Output to ejemplo_tfg_2019.bbl

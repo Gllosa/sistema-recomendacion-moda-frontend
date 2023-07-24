@@ -47,7 +47,6 @@ hmargin=3cm
 
 % EXPRESIONES MATEMATICAS
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
-
 \usepackage{txfonts} 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -352,6 +351,18 @@ hmargin=3cm
 \thispagestyle{empty}
 \mbox{}
 
+\chapter*{Lista de Acrónimos}
+\begin{center}
+	\begin{tabular}{c p{8cm}} % Ajusta el ancho de la columna de los acrónimos según tus necesidades
+			API & Application Programming Interface \\
+			PIB & Producto Interior Bruto
+	\end{tabular}
+\end{center}
+
+\newpage % página en blanco o de cortesía
+\thispagestyle{empty}
+\mbox{}
+
 
 %----------
 %	TRABAJO
@@ -363,10 +374,16 @@ hmargin=3cm
 
 	% COMENZAR A ESCRIBIR EL TRABAJO
 	\section{Motivación}
-	La industria de la moda siempre ha sido una de las más potentes en nuestra sociedad. 
+	La industria de la moda siempre ha sido una de las más potentes en nuestra sociedad
 	Esta industria se ha ido adaptando al auge que han tenido las tecnologías informáticas
 	y es que, en el año 2022, las ventas de ropa online supusieron el 21,1\% de las ventas
-	totales en nuestro país. Es aquí donde entran en juego los sistemas de recomendación.
+	totales en nuestro país. 
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption[Peso de las ventas moda online sobre el total de los ingresos generados por las ventas de ropa en España de 2012 a 2022]{Peso de las ventas moda online sobre el total de los ingresos generados por las ventas de ropa en España de 2012 a 2022 \cite{statista}}}
+		{\includegraphics[scale=0.6]{venta-online-moda.png}}
+	\end{figure}
+	Es aquí donde entran en juego los sistemas de recomendación.
 	Un sistema de recomendación de moda permite ayudar a las personas a encontrar prendas
 	que se ajusten a sus gustos. 
 	Los clientes pueden mejorar su experiencia de compra y estar satisfechos con sus elecciones 
@@ -400,7 +417,79 @@ hmargin=3cm
 	de ropa a partir de ropa que les guste y de los atributos que consideren. 
 	\section{Marco regulador}
 	Para la realización del trabajo se hace uso de un conjunto de imágenes de la competición 
-	iMaterialist (Fashion) 2020 at FGVC7. \cite{imaterialist}
+	``iMaterialist (Fashion) 2020 at FGVC7'' \cite{imaterialist-fashion-2020-fgvc7}. Estas imágenes contienen 
+	rostros de personas reales por lo que  hay que tener en cuenta la Ley Orgánica 3/2018, de 5 de diciembre, 
+	de Protección de Datos Personales y garantía de los derechos digitales \cite{ley-proteccion-datos}, aún así el conjunto de datos
+	ha sido citado de manera apropiada. Por la misma razón se ha de prestar atención a la Ley de Propiedad Intelectual \cite{ley-propiedad-intelectual}. 
+	Además si consideramos este como un trabajo de investigación habría que contemplar la
+	Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación \cite{ley-tecnologia}.
+
+	Las herramientas utilizadas para el desarrollo de este proyecto son de uso libre y gratuito, como son Python,
+	Visual Studio Code, Tensorflow, Keras o React.
+	\section{Entorno socioeconómico}
+	Como ya se mencionó anteriormente, en el apartado de la motivación, la moda es una de las mayores industrias a nivel global.
+	Esta genera mucho interés y supone el 2,8\% del PIB español y el 4\% del mercado laboral \cite{estadisticas-moda}. Es por ello
+	que un sistema de recomendación de moda tiene un gran interés e impacto a nivel social. Algunas de los beneficios son los siguientes,
+	según el articulo de Alma Muñoz ``Cómo los sistemas de recomendación pueden ayudarte a conseguir más ventas'' \cite{alma}.
+	\begin{itemize}
+		\item ``Entre 15\% y 45\% de aumento de las conversiones''
+		\item ``25\% de media de incremento del valor promedio de compra.''
+		\item ``Alargamiento del ciclo de vida del cliente.''
+		\item ``Generación de fidelización del comprador.''
+	\end{itemize}
+
+
+	Además, Alma, menciona que 'Amazon declara que alrededor del 35\% de sus ingresos se debe a recomendaciones de producto.'
+
+
+	En concreto, este producto pretende ser un sistema de recomendación de moda. Es por ello que podría ser útil para cualquier empresa
+	que se dedique a vender ropa de forma online por todos los beneficios que este aporta y que ya he mencionado antes.
+	Además, implementar este sistema en una web de venta de ropa supone una gran ventaja sobre el resto de tus competidores.
+	
+	Un sistema de recomendación también tiene una gran relevancia a nivel social. Los usuarios de estos pueden, no solo llegar
+	a ahorrar grandes cantidades de tiempo, sino también conseguir encontrar prendas más afines a su gusto y personalidad. Esto
+	resulta en una mayor satisfacción por parte del cliente, que necesitará invertir menos tiempo en encontrar mejores productos.
+
+
+	En conclusión, este proyecto aparta muchas ventajas económicas tanto a vendedores como a compradores, además de ahorrar tiempo
+	y conseguir una mayor satisfacción en estos últimos. Más adelante, en su correspondiente apartado, se detallará la planificación y presupuesto.
+
+
+	\section{Estructura del documento}
+	El documento se presenta con una portada, a continuación podemos encontrar un resumen junto con las palabras clave. Después podemos
+	observar una dedicatoria seguida del índice general, el índice de figuras y la lista de acrónimos. De aquí en adelante el documento
+	esta dividido en seis marcados capítulos:
+	\begin{itemize}
+		\item Introducción: Aquí podemos encontrar tanto la motivación para la realización del trabajo como los objetivos que este pretende cumplir. Además se incluye el marco regulador y el entorno socioeconómico. 
+		\item Estado del arte: se elabora un análisis sobre el estado actual del objetivo del proyecto. Se analizan trabajos parecidos, además de argumentar como este se puede diferenciar de los trabajos ya realizados.
+		\item Desarrollo: se explica como se ha llevado a cabo la solución del problema propuesto. Dividiéndolo en sus respectivos subobjetivos ya planteados.
+		\item Resultados: se presentan los resultados obtenidos, con ejemplos, de una manera visual. Además se analiza la calidad de estos.
+		\item Conclusiones: reflexión que valora si se han cumplido los objetivos propuestos.
+		\item Planificación y presupuesto: resumen a cerca de como se ha planificado el proyecto y explicación del cálculo de los presupuestos. 
+	\end{itemize}
+
+
+\chapter{Estado del arte}
+	En este capítulo se analizará el estado actual del proyecto, haciendo un recorrido por las tecnologías necesarias para su realización.
+	Además se realizará un análisis de los proyectos similares junto con una argumentación a cerca de como este puede llegar a diferenciarse de ellos.
+	\section{Visión por computadora}
+	La visión por computadora es la disciplina de aprendizaje automático que trata con imágenes. A través de ella se intenta entender de forma computacional
+	las imágenes. Entre otras cosas, la visión por computadora, se utiliza para el reconocimiento de objetos, la restauración de imágenes, el reconocimiento facial
+	y un sin fin de tareas más. Es por eso la importancia de esta disciplina en este proyecto, ya que vamos a trabajar con imágenes.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption[Detección de caras con el software OpenCV]{Detección de caras con el software OpenCV \cite{cv-ejemplo}}}
+		{\includegraphics[scale=1]{cv-ejemplo.jpg}}
+	\end{figure}
+	La visión por computadora ha tenido un gran avance durante los últimos años debido, principalmente, a las mejoras en hardware. Somos ahora capaces de realizar
+	una mayor cantidad de cálculos en una cantidad mayor de datos gracias a un significativo aumento de la capacidad de cómputo. Estos progresos permiten 
+	que se investigue y profundice más en este campo.
+
+	Con la llegada de las redes neuronales se ha hecho posible la realización de tareas complejas como la clasificación de imágenes,
+	la detección de objetos o la segmentación. Las redes de neuronas convolucionales se han convertido en el camino estandar para este campo
+	de la ciencia. Estas son capaces de ver patrones visuales que, a un humano, se le harían complicados, si no imposibles, de ver.
+
+
 
 %----------
 %	BIBLIOGRAFÍA
