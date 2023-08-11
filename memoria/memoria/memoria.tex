@@ -45,6 +45,9 @@ hmargin=3cm
 	linkcolor=black, % enlaces a partes del documento (p.e. índice) en color negro
 	urlcolor=blue} % enlaces a recursos fuera del documento en azul
 
+\usepackage{booktabs}
+
+
 % EXPRESIONES MATEMATICAS
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{txfonts} 
@@ -62,6 +65,7 @@ hmargin=3cm
 \renewcommand{\headrulewidth}{0pt}
 \rfoot{\thepage}
 \fancypagestyle{plain}{\pagestyle{fancy}}
+
 
 % DISEÑO DE LOS TÍTULOS de las partes del trabajo (capítulos y epígrafes o subcapítulos)
 \usepackage{titlesec}
@@ -137,6 +141,7 @@ hmargin=3cm
 
 % DISEÑO DE FIGURAS. Puedes elegir entre el estilo para ingeniería o para ciencias sociales y humanidades. Por defecto, está activado el estilo de ingeniería. Si deseas utilizar el otro, comenta las líneas del diseño de ingeniería y descomenta las del diseño de ciencias sociales y humanidades
 \usepackage{graphicx}
+\usepackage{subcaption}
 \graphicspath{{imagenes/}} %ruta a la carpeta de imágenes
 
 % Diseño de figuras para ingeniería
@@ -290,31 +295,86 @@ hmargin=3cm
 \setcounter{page}{3}
 	
 	% ESCRIBIR EL RESUMEN AQUÍ
+	La industria de la moda es una de las más potentes en nuestro país y esta se ha ido adaptando al auge tecnológico
+	que hemos vivido en las últimas décadas. Un gran porcentaje de las ventas de este sector se realizan de manera
+	online y es por ello la importancia de un sistema de recomendación.
 	
+	Un sistema de recomendación de moda para las tiendas online resulta muy beneficioso, tanto para propietarios como
+	para clientes. Los primeros aumentan sus ventas mientras que los segundos encuentran más fácil y rápido productos
+	que, en muchas ocasiones, ni siquiera hubieran podido encontrar.
+
+	Para solucionar este problema se hace uso de una amplia base de datos en donde las prendas vienen etiquetadas por sus
+	diferentes atributos. Después de realizar un estudio sobre las tecnologías que pueden resolver este problema se eligen
+	diferentes arquitecturas para resolver las diferentes partes que componen el objetivo principal. Para la segmentación de
+	imágenes, con el fin de conseguir sus máscaras, se hace uso de la arquitectura U2NET. Para el algoritmo de recomendación,
+	se extraen los vectores de características de las imágenes haciendo uso de la arquitectura VGG16, para posteriormente 
+	calcular la similitud coseno entre estos vectores. Además se añade la posibilidad de elegir los atributos que se quiere
+	que estén presentes en la recomendación de la prenda.  
+
+	Una vez se realiza este modelo se desarrolla una aplicación web que es capaz de servirlo para que los usuarios puedan utilizarlo
+	de una manera fácil e intuitiva. El modelo se sirve a través de una API, haciendo uso de \textit{Flask}, a la aplicación web 
+	hecha con \textit{React}.
+
+	También se lleva a cabo un estudio de la efectividad del sistema, analizando los porcentajes de similitud entre recomendaciones
+	y la calidad de estas.
+
+	Este proyecto tiene gran relevancia en el mundo real. Puede llegar a causar un gran impacto tanto en clientes de negocios
+	de venta online de ropa, como en los propios clientes.
+
 	\textbf{Palabras clave:}
 	% Escribir las palabras clave aquí
-	
+	Red convolucional, visión por computadora, segmentación de imágenes, máscara, VGG16, U2NET.
 	\vfill
+
 \end{abstract}
 	\newpage % página en blanco o de cortesía
 	\thispagestyle{empty}
 	\mbox{}
 
 
+	\renewcommand\abstractname{\large\bfseries\filcenter\uppercase{abstract}}
+	\begin{abstract}
+	\thispagestyle{plain}
+	\setcounter{page}{3}
+		
+		% ESCRIBIR EL RESUMEN AQUÍ
+		The fashion industry is one of the most powerful sectors in our country, and it has been adapting to the technological boom that we have experienced in recent decades. A significant percentage of sales in this sector occur online, underscoring the importance of a recommendation system.
+
+		A fashion recommendation system for online stores proves highly advantageous, benefiting both proprietors and customers. The former witness an increase in sales, while the latter find it easier and quicker to discover products that, in many instances, they might not have come across otherwise.
+		
+		To address this issue, an extensive database is employed, wherein garments are labeled with their distinct attributes. After conducting a study on technologies capable of resolving this problem, diverse architectures are selected to tackle the various components constituting the primary objective. For image segmentation, aimed at obtaining their masks, the U2NET architecture is utilized. Concerning the recommendation algorithm, feature vectors are extracted from the images using the VGG16 architecture, subsequently computing the cosine similarity between these vectors. Furthermore, the option to select the attributes to be present in the garment recommendation is incorporated.
+		
+		Once this model is developed, a web application is created to facilitate user-friendly and intuitive utilization. The model is served through an API, utilizing \textit{Flask}, for the web application built with \textit{React}.
+		
+		An assessment of the system's effectiveness is also conducted, analyzing similarity percentages between recommendations and their quality.
+		
+		This project holds significant relevance in the real world, potentially yielding a substantial impact on both online clothing business clientele and the customers themselves.
+	
+		\textbf{Keywords:}
+		% Escribir las palabras clave aquí
+		Convolutional network, computer vision, images segmentation, mask, VGG16, U2NET.
+		\vfill
+
+	\end{abstract}
+
+\newpage % página en blanco o de cortesía
+\thispagestyle{empty}
+\mbox{}
+
 %----------
 %	DEDICATORIA
 %----------	
-\chapter*{Dedicatoria}
+% \chapter*{Dedicatoria}
 
-\setcounter{page}{5}
+% \setcounter{page}{5}
 	
-	% ESCRIBIR LA DEDICATORIA AQUÍ	
+% 	% ESCRIBIR LA DEDICATORIA AQUÍ	
 		
-	\vfill
+% 	\vfill
 	
-	\newpage % página en blanco o de cortesía
-	\thispagestyle{empty}
-	\mbox{}
+% 	\newpage % página en blanco o de cortesía
+% 	\thispagestyle{empty}
+% 	\mbox{}
 	
 
 %----------
@@ -355,7 +415,13 @@ hmargin=3cm
 \begin{center}
 	\begin{tabular}{c p{8cm}} % Ajusta el ancho de la columna de los acrónimos según tus necesidades
 			API & Application Programming Interface \\
-			PIB & Producto Interior Bruto
+			PIB & Producto Interior Bruto \\
+			HTML & HyperText Markup Language \\
+			CSS & Cascading Style Sheets \\
+			CPU & Central Processing Unit \\
+			GPU & Graphics Processing Unit \\
+			IDE & Integrated development environment \\
+			UI & User Interface
 	\end{tabular}
 \end{center}
 
@@ -374,7 +440,7 @@ hmargin=3cm
 
 	% COMENZAR A ESCRIBIR EL TRABAJO
 	\section{Motivación}
-	La industria de la moda siempre ha sido una de las más potentes en nuestra sociedad
+	La industria de la moda siempre ha sido una de las más potentes en nuestra sociedad.
 	Esta industria se ha ido adaptando al auge que han tenido las tecnologías informáticas
 	y es que, en el año 2022, las ventas de ropa online supusieron el 21,1\% de las ventas
 	totales en nuestro país. 
@@ -391,8 +457,8 @@ hmargin=3cm
 	de las ventas de los sitios web que se dedican a la moda.
 	Un sistema de recomendación que esté basado únicamente en imágenes es útil, pero el hecho de
 	introducir la posibilidad de especificar los atributos que deben estar en las prendas lo mejora
-	aún más. El hecho de permitir a los usuarios obtener recomendaciones les ahorra mucho tiempo en búsquedas
-	que, muchas veces, pueden resultar tediosa.
+	aún más. Permitir a los usuarios obtener recomendaciones les ahorra mucho tiempo en búsquedas
+	que, en muchas ocasiones, pueden resultar tediosas.
 
 	En conclusión, el hecho de crear un sistema de recomendación de moda basado en atributos multimodales
 	resulta muy interesante tanto para propietarios de tiendas online, ya que mejoran sus ventas, como para
@@ -402,13 +468,12 @@ hmargin=3cm
 	\section{Objetivos}
 	El objetivo de este trabajo es el de crear una interfaz web que sea capaz de recomendar imágenes de
 	ropa, con una cierta similitud, a partir de otra previamente dada por el usuario. Además se podrán 
-	especificar los atributos que se desean en las imágenes de salida (por ejemplo: manga larga, ajuste suelto, etc.).
+	especificar los atributos que se deseen en las imágenes de salida (por ejemplo: manga larga, ajuste suelto, etc.).
 	\\
 	Siendo este el principal objetivo podemos diferenciar los siguientes subobjetivos:
 	\begin{itemize}
-		\item Desarrollar un modelo de inteligencia artificial que sea capaz de recomendar imágenes en base a atributos multimodalaes y otra imagen.
-		\item Etiquetar las imágenes a utilizar con sus respectivos atributos.
-		\item Crear una API que sea permita la comunicación entre el modelo previamente mencionado y una interfaz.
+		\item Desarrollar un modelo de inteligencia artificial que sea capaz de recomendar imágenes en base a atributos multimodales y otra imagen.
+		\item Crear una API que permita la comunicación entre el modelo previamente mencionado y una interfaz.
 		\item Diseñar una interfaz intuitiva que permita a los usuarios cargar una imagen, seleccionar los atributos de interés y visualizar los resultados proporcionados por el modelo.
 	\end{itemize}
 
@@ -416,21 +481,21 @@ hmargin=3cm
 	que sea capaz de brindar a los usuarios la capacidad de obtener recomendaciones de prendas 
 	de ropa a partir de ropa que les guste y de los atributos que consideren. 
 	\section{Marco regulador}
-	Para la realización del trabajo se hace uso de un conjunto de imágenes de la competición 
-	``iMaterialist (Fashion) 2020 at FGVC7'' \cite{imaterialist-fashion-2020-fgvc7}. Estas imágenes contienen 
+	Para la realización del trabajo se hace uso de un conjunto de imágenes de la competición
+	``iMaterialist (Fashion) 2020 at FGVC7'' \cite{imaterialist}. Estas imágenes contienen
 	rostros de personas reales por lo que  hay que tener en cuenta la Ley Orgánica 3/2018, de 5 de diciembre, 
 	de Protección de Datos Personales y garantía de los derechos digitales \cite{ley-proteccion-datos}, aún así el conjunto de datos
 	ha sido citado de manera apropiada. Por la misma razón se ha de prestar atención a la Ley de Propiedad Intelectual \cite{ley-propiedad-intelectual}. 
 	Además si consideramos este como un trabajo de investigación habría que contemplar la
 	Ley 14/2011, de 1 de junio, de la Ciencia, la Tecnología y la Innovación \cite{ley-tecnologia}.
 
-	Las herramientas utilizadas para el desarrollo de este proyecto son de uso libre y gratuito, como son Python,
+	Las herramientas utilizadas para el desarrollo de este proyecto son de uso libre y gratuito, como son \textit{Python},
 	Visual Studio Code, Tensorflow, Keras o React.
 	\section{Entorno socioeconómico}
-	Como ya se mencionó anteriormente, en el apartado de la motivación, la moda es una de las mayores industrias a nivel global.
+	Como ya se mencionó anteriormente en el apartado de la motivación, la moda es una de las mayores industrias a nivel global.
 	Esta genera mucho interés y supone el 2,8\% del PIB español y el 4\% del mercado laboral \cite{estadisticas-moda}. Es por ello
-	que un sistema de recomendación de moda tiene un gran interés e impacto a nivel social. Algunas de los beneficios son los siguientes,
-	según el articulo de Alma Muñoz ``Cómo los sistemas de recomendación pueden ayudarte a conseguir más ventas'' \cite{alma}.
+	que un sistema de recomendación de moda tiene un gran interés e impacto a nivel social. Algunos de los beneficios son los siguientes,
+	según el artículo de Alma Muñoz ``Cómo los sistemas de recomendación pueden ayudarte a conseguir más ventas'' \cite{alma}.
 	\begin{itemize}
 		\item ``Entre 15\% y 45\% de aumento de las conversiones''
 		\item ``25\% de media de incremento del valor promedio de compra.''
@@ -439,33 +504,34 @@ hmargin=3cm
 	\end{itemize}
 
 
-	Además, Alma, menciona que 'Amazon declara que alrededor del 35\% de sus ingresos se debe a recomendaciones de producto.'
+	Además, Alma, menciona que ``Amazon declara que alrededor del 35\% de sus ingresos se debe a recomendaciones de producto.''
 
 
 	En concreto, este producto pretende ser un sistema de recomendación de moda. Es por ello que podría ser útil para cualquier empresa
-	que se dedique a vender ropa de forma online por todos los beneficios que este aporta y que ya he mencionado antes.
-	Además, implementar este sistema en una web de venta de ropa supone una gran ventaja sobre el resto de tus competidores.
+	que se dedique a la venta de ropa vía online por todos los beneficios que este aporta y que ya han sido mencionados.
+	Además, implementar este sistema en una web de venta de ropa supone una gran ventaja sobre el resto de los competidores.
 	
 	Un sistema de recomendación también tiene una gran relevancia a nivel social. Los usuarios de estos pueden, no solo llegar
 	a ahorrar grandes cantidades de tiempo, sino también conseguir encontrar prendas más afines a su gusto y personalidad. Esto
 	resulta en una mayor satisfacción por parte del cliente, que necesitará invertir menos tiempo en encontrar mejores productos.
 
 
-	En conclusión, este proyecto aparta muchas ventajas económicas tanto a vendedores como a compradores, además de ahorrar tiempo
-	y conseguir una mayor satisfacción en estos últimos. Más adelante, en su correspondiente apartado, se detallará la planificación y presupuesto.
+	En conclusión, este proyecto aporta muchas ventajas económicas tanto a vendedores como a compradores, ahorrando tiempo
+	y consiguiendo una mayor satisfacción con la compra. Más adelante, en su correspondiente apartado, se detallará la planificación y presupuesto.
 
 
 	\section{Estructura del documento}
-	El documento se presenta con una portada, a continuación podemos encontrar un resumen junto con las palabras clave. Después podemos
-	observar una dedicatoria seguida del índice general, el índice de figuras y la lista de acrónimos. De aquí en adelante el documento
-	esta dividido en seis marcados capítulos:
+	El documento se presenta con una portada, a continuación podemos encontrar un resumen junto con las palabras clave. Después, podemos
+	encontrar el índice general, el índice de figuras y la lista de acrónimos. De aquí en adelante el documento
+	está dividido en siete marcados capítulos:
 	\begin{itemize}
-		\item Introducción: Aquí podemos encontrar tanto la motivación para la realización del trabajo como los objetivos que este pretende cumplir. Además se incluye el marco regulador y el entorno socioeconómico. 
-		\item Estado del arte: se elabora un análisis sobre el estado actual del objetivo del proyecto. Se analizan trabajos parecidos, además de argumentar como este se puede diferenciar de los trabajos ya realizados.
-		\item Desarrollo: se explica como se ha llevado a cabo la solución del problema propuesto. Dividiéndolo en sus respectivos subobjetivos ya planteados.
-		\item Resultados: se presentan los resultados obtenidos, con ejemplos, de una manera visual. Además se analiza la calidad de estos.
-		\item Conclusiones: reflexión que valora si se han cumplido los objetivos propuestos.
-		\item Planificación y presupuesto: resumen a cerca de como se ha planificado el proyecto y explicación del cálculo de los presupuestos. 
+		\item \textbf{Introducción:} aquí podemos encontrar tanto la motivación para la realización del trabajo como los objetivos que este pretenden cumplir. Además se incluye el marco regulador y el entorno socioeconómico. 
+		\item \textbf{Estado del arte:} se elabora un análisis sobre el estado actual del objetivo del proyecto. Se analizan trabajos parecidos y el estado de las tecnologías empleadas. Además de argumentar como este proyecto se puede diferenciar de los trabajos ya realizados.
+		\item \textbf{Diseño del sistema:} se explica como se ha llevado a cabo la solución del problema propuesto. Dividiéndolo en sus respectivos subobjetivos ya planteados.
+		\item \textbf{Resultados:} se presentan los resultados obtenidos, con ejemplos, de una manera visual. Además se analiza la calidad de estos a través de los porcentajes de similitud.
+		\item \textbf{Conclusiones:} reflexión que valora si se han cumplido los objetivos propuestos.
+		\item \textbf{Trabajos futuros:} se analizan las posibles continuaciones y mejoras que se pueden llevar a cabo a partir de este trabajo.
+		\item \textbf{Planificación y presupuestos:} resumen a cerca de como se ha planificado el proyecto y explicación del cálculo de los presupuestos. 
 	\end{itemize}
 
 
@@ -473,9 +539,9 @@ hmargin=3cm
 	En este capítulo se analizará el estado actual del proyecto, haciendo un recorrido por las tecnologías necesarias para su realización.
 	Además se realizará un análisis de los proyectos similares junto con una argumentación a cerca de como este puede llegar a diferenciarse de ellos.
 	\section{Visión por computadora}
-	La visión por computadora es la disciplina de aprendizaje automático que trata con imágenes. A través de ella se intenta entender de forma computacional
+	La visión por computadora es la disciplina del aprendizaje automático que trata con imágenes. A través de ella se intenta entender de forma computacional
 	las imágenes. Entre otras cosas, la visión por computadora, se utiliza para el reconocimiento de objetos, la restauración de imágenes, el reconocimiento facial
-	y un sin fin de tareas más. Es por eso la importancia de esta disciplina en este proyecto, ya que vamos a trabajar con imágenes.
+	y un sin fin de tareas más. Dado que se trabaja con imágenes la importancia de esta disciplina en este proyecto es máxima.
 	\begin{figure}[H]
 		\ffigbox[\FBwidth]
 		{\caption[Detección de caras con el software OpenCV]{Detección de caras con el software OpenCV \cite{cv-ejemplo}}}
@@ -486,12 +552,745 @@ hmargin=3cm
 	que se investigue y profundice más en este campo.
 
 	Con la llegada de las redes neuronales se ha hecho posible la realización de tareas complejas como la clasificación de imágenes,
-	la detección de objetos o la segmentación. Las redes de neuronas convolucionales se han convertido en el camino estandar para este campo
-	de la ciencia. Estas son capaces de ver patrones visuales que, a un humano, se le harían complicados, si no imposibles, de ver.
+	la detección de objetos o la segmentación. Las redes de neuronas convolucionales se han convertido en el estándar para este campo
+	de la ciencia. Estas son capaces de ver patrones visuales que a un humano, se le harían complicados, si no imposibles, de ver.
+
+	\section{Redes de Neuronas Convolucionales}
+	Las redes neuronales están compuestas por diferentes capas, que a su vez están compuestas por diferentes neuronas. Todas las redes
+	tienen una capa de entrada, una o más capas intermedias y una capa de salida. Los nodos de las capas están conectados entre sí
+	y estos pueden activar o no, dependiendo del resultado de su función asociada, el nodo al que están conectados. 
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption[Red de Neuronas]{Red de Neuronas \cite{red}}}
+		{\includegraphics[scale=0.3]{red-neuronal.png}}
+	\end{figure}
+	Las redes de neuronas convolucionales son las que se utilizan para tareas de visión por computadora. Estas redes son mucho más eficientes
+	a la hora de tratar con imágenes y esta es la razón por la que se usan en este campo del aprendizaje automático. En las primeras capas
+	se identifican los elementos de la imagen a una escala grande, como pueden ser los bordes o los colores. A medida que se va profundizando
+	en la red se van reconociendo partes más grandes de la imagen. Una vez se llega al final, la red es capaz de identificar el tipo de imagen. 
+	Las redes convolucionales se componen de tres capas:
+	\begin{itemize}
+		\item \textbf{Capa convolucional:} en esta capa se aplica el proceso conocido como convolución. Se aplica un filtro (kernel)
+		con el fin de detectar las características que se buscan en la imagen. 
+		\item \textbf{Capa de agrupación:} en esta capa se aplica una reducción de dimensionalidad. Esta capa es muy importante ya que, aunque se
+		pierde en  información, se gana en eficiencia.
+		\item \textbf{Capa totalmente conectada:} en esta capa, a diferencia de las demás, todos los nodos están conectados a algún nodo
+		de la capa anterior. 
+	\end{itemize}
+	Existen varios tipos de redes de neuronas convolucionales, entre ellas: AlexNet, GoogleNet, ResNet, ZFNet o VGGNet.
+	Para la realización de este proyecto se ha optado por usar la última.
+
+	\section{Extracción de caracteristicas}
+	VGG16
+	\section{Segmentación de imágenes}
+	U2NET
+	\section{Trabajos similares}
+	Hay muchos trabajos previos similares a este. Entre ellos destacan:
+	\begin{itemize}
+		\item ``Image-based Product Recommendation System with Convolutional Neural
+		Networks'' \cite{stanford-paper}. En este artículo se describen las técnicas utilizadas para realizar un sistema de recomendación
+		para tiendas online basado en la similitud entre imágenes. Se prueban los algorítimos SVG, AlexNet y VGG. Tras evaluar los tres
+		este último resulta ser el más preciso. Una vez obtenidos los vectores de las imágenes se calcula la distancia coseno entre estos
+		para calcular la similitud entre ambas.
+		\item ``Image-Based Service Recommendation System: A JPEG-Coefficient RFs Approach'' \cite{image-based-paper}. 
+		Este artículo consta de dos fases. En la primera tratan de clasificar las imágenes según el tipo de producto mientras 
+		que en la segunda se crea un sistema de recomendación que trata de encontrar los productos más similares a otro dado. 
+		Para la segunda fase, que es la que aplica en nuestro caso, se usan coeficientes JPEG para sacar las 
+		características de las imágenes. Después se calcula la distancia euclidiana entre estas.
+	\end{itemize}
+
+	Este trabajo se diferencia en varios aspectos de los anteriores. No solo se busca una recomendación en base a una imagen inicial,
+	sino que también se permite al usuario seleccionar los atributos que quiere que tengan las imágenes recomendadas. Además de esta
+	principal diferencia este proyecto no se queda solo en un modelo, también
+	cuenta con una interfaz gráfica que permite a los usuarios hacer uso del modelo.
+
+	\chapter{Diseño del sistema}
+	\section{Conjunto de datos}
+	Como se mencionó en el apartado ``Marco Reguador'' en este trabajo se hace uso del conjunto de datos 
+	``iMaterialist (Fashion) 2020 at FGVC7'' \cite{imaterialist}. Este conjunto de datos cuenta con varios archivos que se 
+	explican a continuación.
+
+	En primer lugar tenemos dos conjuntos de imágenes, ``train'' y ``test''. El conjunto ``train'' cuenta con 43.793 imágenes
+	y ``test'' con 3200. Ambos conjuntos contienen estas imágenes nombradas por un identificador.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Ejemplo de imagen en el conjunto de datos}}
+		{\includegraphics[scale=0.4]{ejemplo-dataset.jpg}}
+	\end{figure}
+
+	Además hay un archivo llamado ``train.csv'' que contiene los siguientes campos:
+	\begin{itemize}
+		\item \textbf{imageId}: identificador único para las imágenes. Para cada imagen hay varias entradas en el archivo, tantas como segmentaciones
+		tenga la imagen
+		\item \textbf{encodedPixels}: estos pixeles son la segmentación de la imagen
+		\item \textbf{height}: altura de la imagen
+		\item \textbf{width}: ancho de la imagen
+		\item \textbf{classId}: identificador de la clase a la que pertenecen
+		\item \textbf{attributesIds}: lista de identificadores de atributos que contiene este segmento de la imagen 
+	\end{itemize}
+
+	La segmentación es de gran utilidad, ya que sirve para realizar las máscaras de las imágenes. 
+	También se destaca el campo \textbf{attributesIds} ya que gracias a este podemos filtrar las 
+	imágenes a gusto del usuario. Estos atributos vienen descritos en un archivo llamado ``label\textunderscore descriptions.json''.
+	Cada atributo tiene una descripción y una supercategoria asociadas a su identificador único.
+
+	\section{Modelo}
+	\subsection{Segmentación}
+	En primer lugar se deben preprocesar las imágenes, el objetivo del trabajo es hacer recomendaciones de prendas similares, por lo tanto
+	todo lo que no sea una prenda en la imagen puede influir negativamente en la recomendación. Por ejemplo, se podrían recomendar prendas
+	con el fondo de la imagen similar, imágenes que tengan una misma marca de agua o imágenes en las que los modelos que las visten tengan
+	parecidos físicos, entre otras cosas.
+	Estos aspectos no deberían influir en la recomendacion por lo que lo primero que se realiza son las máscaras de las imágenes. 
+	Para ello se utiliza el atributo \textbf{encodedPixels}.
+	Con estos pixeles, que son una segmentación de las prendas, se puede obtener una imagen que consista únicamente en ropa.
+	A continuación se muestra un ejemplo de una imagen antes y después de aplicarle la máscara.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.4\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{ejemplo-sin-mascara.jpg}
+		\end{subfigure}
+		\begin{subfigure}{0.45\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{ejemplo-con-mascara.jpg}
+		\end{subfigure}
+		\caption{Ejemplo de imagen antes y después de aplicar la máscara}
+	\end{figure}
+
+	Como se puede observar en la figura, la máscara ha quitado todo excepto la prenda.
+	Todas estas máscaras son preprocesadas y almacenadas, ya que serán las que se usen para el modelo.
 
 
+	Esto no es suficiente, ya que el usuario proporciona una imagen que no está en la base de datos, por lo que no se tiene la segmentación de esta.
+	Debido a este motivo es necesario hacer uso de un modelo de segmentación para generar la máscara de la imagen dada por el usuario.
+	Hay un gran número de arquitecturas que podrían resolver este problema. A continuación se describen algunas de ellas:
+	\begin{itemize}
+		\item \textbf{U-Net:} su nombre viene dado porque su arquitectura tiene forma de U, combina capas de convolución y deconvolución para conseguir la segmentación de las imágenes.
+		\item \textbf{SegNet:} utiliza capas de \textbf{pooling} para conseguir el objetivo de segmentar las imágenes.
+		\item \textbf{Mask R-CNN:} esta arquitectura es una combinación de \textbf{Faster R-CNN}, que sirve para la detección de objetos, con la generación de máscaras.
+		\item \textbf{DeepLab:} esta arquitectura utiliza la convolución dilatada para lograr el objetivo de segmentar las imágenes.
+		\item \textbf{U2-Net:} esta arquitectura es una extension de \textbf{U-Net} que incluye la generación de máscaras.
+	\end{itemize}
 
-%----------
+
+	Finalmente se elige hacer uso de la arquitectura \textbf{U2-Net}, que cuenta con todas las ventajas de \textbf{U-Net} y además esta 
+	adaptada para la creación de máscaras. Esta arquitectura tiene una gran precisión aún cuando actua sobre imágenes de alta resolución,
+	lo que la convierte en una gran candidata para la segmentación de imágenes de moda.
+
+	\textbf{U2-Net} nació en el año 2020 en la universidad de Alberta, Canadá, con
+	el artículo ``U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection'' \cite{u2net}. Este artículo fue galardonado
+	en 2020 como el mejor en reconocimiento de patrones.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption[Arquitectura U2-Net]{Arquitectura U2-Net \cite{u2net-gh}}}
+		{\includegraphics[scale=0.4]{u2net.png}}
+	\end{figure}
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption[Ejemplo de creación de máscaras con la arquitectura U2-Net]{Ejemplo de creación de máscaras con la arquitectura U2-Net \cite{u2net-gh}}}
+		{\includegraphics[scale=0.4]{u2net-mascara.jpg}}
+	\end{figure}
+
+	\subsection{Algoritmo de recomendación}
+	El siguiente paso es extraer las características de todas las imágenes. Para ello se hace uso de
+	una red de neuronas convolucional. Como ya se mencionó anteriormente se ha optado por 
+	elegir el modelo VGG16. Este modelo tiene una estructura fácil de entender y es un modelo más profundo
+	que sus predecesores, como puede ser AlexNet, lo que permite extraer características de mayor complejidad.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption[Estructura algoritmo VGG16]{Estructura algoritmo VGG16 \cite{vgg}}}
+		{\includegraphics[scale=0.4]{vgg16.png}}
+	\end{figure}
+
+	El modelo hace uso de la arquitectura VGG16 y extrae el vector de características de todas las máscaras.
+	Estos vectores son almacenados en una matriz. Cuando el usuario proporciona una imagen, se genera su máscara con el procedimiento
+	mencionado anteriormente. Después se obtiene también su vector de características y se calcula la similitud coseno
+	con los vectores de todas las demás imágenes. Finalmente se filtra el conjunto de datos por las prendas
+	que contengan los atributos seleccionados por el usuario y se devuelven las $N$ imágenes con la mayor similitud,
+	donde $N$ es el número de imágenes que el usuario desea obtener.
+	El siguiente diagrama resume el funcionamiento del modelo.
+
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Diagrama del funcionamiento del modelo}}
+		{\includegraphics[scale=0.45]{diagrama-modelo.png}}
+	\end{figure}
+
+	\section{API}
+	Con el fin de poder crear una interfaz gráfica fácil de usar para un usuario común es necesario tener una API que sirva el modelo.
+	Una API es una forma de conectar diferentes aplicaciones para lograr que trabajen juntas. La API permite
+	a la interfaz gráfica poder consumir el modelo de inteligencia artificial previamente descrito.
+
+	Se ha optado por hacer esta API en \textit{Python}, ya que facilita el desarrollo al estar el modelo también hecho con
+	este mismo lenguaje. La librería elegida para construir esta API es Flask, un \textit{framework} diseñado para poder hacer
+	aplicaciones CRUD (\textit{Create}, \textit{Read}, \textit{Update}, \textit{Delete}). Una aplicación CRUD puede tener varios
+	\textit{endpoint}, rutas a las que enviar una solicitud. Cada una de estas rutas puede realizar las acciones 
+	de crear, leer, actualizar o borrar información en la API.
+	
+	En el caso de nuestra API solo han sido necesarios dos \textit{endpoints}.
+
+	\begin{itemize}
+		\item \textbf{``/recommendations'':}
+		
+		Usa el método \textit{POST}. Este \textit{endpoint} espera
+		recibir una imagen, un número de recomendaciones y una lista de identificadores de atributos opcional. Una vez
+		recibe estos argumentos, la API hace uso del modelo y devuelve la lista de identificadores de las imágenes que,
+		teniendo los atributos requeridos, tengan la mayor similitud.
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Ejemplo de peteción al \textit{endpoint} ``/recommendations''}}
+			{\includegraphics[scale=0.8]{postman-recommendations.png}}
+		\end{figure}
+		\item \textbf{``/image/<id>'':}
+		
+		La API permite recuperar imágenes a partir de su identificador gracias a este \textit{endpoint}, donde
+		``id'' es el identificador de la imagen que se desea obtener. Solo es necesario hacer una petición de tipo \textit{GET}
+		con un identificador válido en la ruta.
+	
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Ejemplo de peteción al \textit{endpoint} ``/image/<id>''}}
+			{\includegraphics[scale=0.8]{ejemplo-peticion-imagen.png}}
+		\end{figure}
+	\end{itemize}
+
+	\section{Interfaz}
+
+	Para la interfaz gráfica se tuvieron en cuenta varias opciones. La primera de ellas fue \textit{StreamLit}, una plataforma
+	para desarollorar interfaces para proyectos de inteligencia artificial escrita en \textit{Python}. Permite desplegar este
+	tipo de aplicaciones de una manera muy sencilla, escribiendo muy pocas líneas de código. Por otro lado se pensó en usar
+	\textit{Gradio}, una plataforma que funciona de una manera muy similar a \textit{StreamLit}. Ambas opciones son buenas
+	pero al final se decidió hacer uso del \textit{framework} de desarrollo \textit{React}, del leanguaje \textit{JavaScript}.
+	Aunque las dos primeras herramientas eran interesantes para conseguir un desarrollo rápido, las opciones de interfaz quedaban más limitadas.
+
+	El hecho de no poder hacer la interfaz completamente a mi gusto fue lo que me hizo decantarme por \textit{React}, con el cual
+	se puede hacer una web completa de principio a fin, con todas sus características. Además se hace uso de \textit{TypeScript}, en lugar
+	de \textit{JavaScript}, ya que ofrece una mayor solidez gracias a su tipado estático. Esto ayuda a no cometer errores difíciles de
+	depurar durante el desarrollo, aunque a veces pueda resultar tedioso el hecho de tener que marcar todos los tipos. El hecho de utilizar
+	\textit{React} resulta muy útil, ya que se puede organizar el código por componentes reutilizables en donde se junta el \textit{HTML}
+	con el \textit{JavaScript}.
+
+	El proyecto tiene la siguiente estructura:
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Estructura del proyecto}}
+		{\includegraphics[scale=0.6]{estructura-carpetas.png}}
+	\end{figure}
+
+	\begin{itemize}
+		\item \textbf{attributtesSearch.tsx}: este componente sirve para buscar los atributos que el usuario quiera
+		seleccionar para que aparezcan en sus recomendaciones. Cuenta con la lista completa de atributos (que son elementos
+		seleccionables) y con un buscador, ya que hay 341 atributos diferentes.
+		\item \textbf{attributtesSelector.tsx}: este componente contiene la búsqueda de atributos. 
+		Además cuenta con un botón para que, en caso de que el usuario así lo desee, 
+		sirve para obtener recomendaciones de prendas con todo tipo de atributos.
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Componente \textbf{attributesSearch}}}
+			{\includegraphics[scale=0.4]{attributes-search.png}}
+		\end{figure}
+		\item \textbf{header.tsx}: este es el encabezado de la página.
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Componente \textbf{header}}}
+			{\includegraphics[scale=0.3]{header.png}}
+		\end{figure}
+		\item \textbf{imageUploader}: este componente es una caja que permite al usuario subir la imagen que
+		desea utilizar para obtener recomendaciones. Esta permite explorar sus archivos locales y subir un
+		archivo que debe ser de tipo imagen.
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Componente \textbf{imageUploader}}}
+			{\includegraphics[scale=0.7]{image-uploader.png}}
+		\end{figure}
+		\item \textbf{stepper}: este componente sirve para pasar las pantallas del proceso de dar toda la información,
+		ya que la aplicación consiste en una sola página.
+		\item \textbf{services.ts}: este archivo se encarga de realizar las peticiones a la API.
+		\item \textbf{services.interfaces.ts}: este archivo contiene las interfaces necesarias para los servicios.
+		\item \textbf{constants.js}: en este fichero se almacenan las variables que son constantes a lo largo del proyecto.
+		\item \textbf{globals.css}: en este fichero se guarda la configuración CSS que afecta a todo el proyecto.
+		\item \textbf{label\textunderscore descriptions.json}: este archivo se usa para asociar los identificadores de los atributos
+		a sus descripciones.
+		\item \textbf{page.tsx}: esta es la página principal, donde todos los componentes se unen para componer la aplicación.
+		
+
+		Nada más cargar la página podemos ver una ventana que nos pide subir una imagen. Una vez subida la imagen
+		se puede presionar el botón de ``siguiente'', el cual nos lleva a seleccionar el número de recomendaciones, 
+		a través de una barra de selección de números. Una vez más es posible presionar el botón
+		de ``siguiente'', esta vez nos llevará a la ventana final, la selección de atributos. Esta contiene la lista completa de los 
+		atributos seleccionables. Los atributos seleccionados quedan marcados en la parte superior, desde donde se puede 
+		eliminar la selección. Además hay un buscador dada el gran número de atributos que hay. Una vez ya está todo listo se
+		puede pulsar sobre el botón ``procesar''. Este botón manda una petición a la API que, haciendo uso del modelo, devuelve los
+		identificadores de las imágenes con mayor similitud. Con estos identificadores se vuelve a hacer una petición por cada uno de
+		ellos para obtener sus respectivas imágenes. Estas imágenes se muestran en una galería que se puede poner a tamaño completo.
+		Si se desea repetir el proceso basta con pulsar el botón ``resetear''.
+
+		A continuación se muestra, a través de imágenes, el funcionamiento descrito anteriormente.
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Pantalla inicial, subida de imagen}}
+			{\includegraphics[scale=0.3]{pantalla-1.png}}
+		\end{figure}
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Selección del número de recomendaciones}}
+			{\includegraphics[scale=0.3]{pantalla-2.png}}
+		\end{figure}
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Selección de atributos}}
+			{\includegraphics[scale=0.3]{pantalla-3.png}}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Barra de carga mientras la API procesa la solicitud}}
+			{\includegraphics[scale=0.3]{pantalla-carga.png}}
+		\end{figure}
+		\begin{figure}[H]
+			\ffigbox[\FBwidth]
+			{\caption{Resultado del proceso. Recomendaciones.}}
+			{\includegraphics[scale=0.3]{output.png}}
+		\end{figure}
+
+	\end{itemize}
+
+	\section{Tecnologías empleadas}
+	Para la realización de este trabajo ha sido necesario el uso tanto de hardware como de software.
+	En la siguiente tabla se muestra el hardware utilizado.
+	\begin{table}[H]
+		\centering
+		\caption{Especificaciones del hardware utilizado}
+		\begin{tabular}{llll}
+				\toprule
+				\textbf{Equipo} & \textbf{RAM} & \textbf{CPU} & \textbf{GPU}\\
+				\midrule
+				\textbf{Ordenador de sobremesa} & 16 GB & AMD RYZEN 53500X & AMD Radeon RX 5500 XT  \\
+				\textbf{HP ENVY 13} & 8 GB & INTEL i7 & NVIDIA GeForce MX150 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	Ambos ordenadores tienen como sistema operativo \textit{Windows}, 10 y 11 respectivamente.
+	Se ha hecho uso del IDE \textit{VScode}, de código abierto, para el desarrollo de tanto la API como la interfaz gráfica.
+	
+	
+	En el caso de la API se ha usado el lenguaje de programación \textit{Python} junto con las siguientes librerías:
+	
+	\begin{itemize}
+		\item \textbf{Flask}: \textit{framework} minimalista que sirve para desarrollar aplicaciones web. En este caso
+		sirve para comunicar el modelo con la web. 
+		\item \textbf{Pickle}: utilizada para cargar a memoria el modelo con la matriz de características extraídas de las imágenes.
+		\item \textbf{OS}: utilizada para trabar con los archivos del sistema. Recuperar, crear y eliminar imágenes en él.
+		\item \textbf{JSON}: manejo de objetos de tipo JSON. Utilizada para comunicarse con la aplicación web.
+		\item \textbf{Numpy}: cálculos optimizados con las matrices que representan las imágenes. Utilización de algunas de sus
+		funciones matemáticas. 
+		\item \textbf{Keras}: utilizado para hacer uso de la arquitectura VGG16.  
+		\item \textbf{Tensorflow}: utilizado para cargar imágenes y transformarlas a listas.
+		\item \textbf{Scipy}: uso de su función optimizada para calcular la distancia coseno entre vectores, ya que ofrece un rendimiento
+		superior y se reducen los tiempos de espera.
+		\item \textbf{Pandas}: utilizado para usar la estructura \textit{Dataframe} que aporta una gran velocidad a la hora de trabajar
+		con grandes cantidades de datos, como es el caso.
+		\item \textbf{Matplotlib}: utilizado para generar gráficas que sirvieron para analizar el conjunto de datos.
+	\end{itemize}
+
+	La interfaz gráfica por otra parte ha sido desarrollada con \textit{TypeScript} junto con las siguientes librerías:
+	\begin{itemize}
+		\item \textbf{React}: este es el \textit{framework} principal utilizado en la interfaz gráfica. Aporta una gran facilidad para
+		poder reutilizar código y no repetirlo. Además cuenta con multitud de librerías que resultan de gran utilizad.
+		\item \textbf{Material UI}: librería para el \textit{framework React} que contiene elementos gráficos de UI. Además aporta
+		una gran usabilidad a la web. 
+		\item \textbf{Axios}: librería que sirve para realizar las peticiones web a la API.
+		\item \textbf{React image gallery}: componente de \textit{React} que renderiza una galería de imágenes.
+	\end{itemize}
+
+	\chapter{Resultados}
+
+	En este apartado se analizan los resultados obtenidos de la recomendación a través de ejemplos de entrada
+	y salida. Además se comparan los resultados con y sin máscara y con y sin el uso de atributos.
+
+
+	\section{Sin máscaras}
+
+	En un inicio el sistema de recomendación funcionaba sin máscaras. Este sistema funcionaba correctamente pero
+	tenía ciertas desventajas:
+	\begin{itemize}
+		\item En ocasiones la recomendación se fijaba en el color de fondo de las imágenes en lugar de las prendas en sí.
+		\item Tenía en cuenta los modelos que vestían las prendas.
+		\item Recomendaba prendas con el mismo color.
+		\item Tenía en cuenta marcas de agua en las imágenes.
+	\end{itemize}
+	Aun así se obtienen recomendaciones con un alto nivel de similitud coseno. A continuación se muestran algunos ejemplos
+	de entrada y salida con sus correspondientes porcentajes de similitud.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones sin uso de máscaras}}
+		{\includegraphics[scale=0.5]{recomendacion1.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 75'75 \\
+				Segunda recomendación & 75'42 \\
+				Tercera recomendación & 74'65 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones sin uso de máscaras}}
+		{\includegraphics[scale=0.6]{recomendacion2.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 79'51 \\
+				Segunda recomendación & 77'84 \\
+				Tercera recomendación & 77'23 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+	Estas recomendaciones ejemplifican el problema presentado anteriormente. Todas ellas tienen una marca de agua en la
+	esquina inferior derecha, todas ocurren en un desfile de moda, todas están vistiendo el color negro. Este hecho no impide
+	que se obtengan porcentajes de similitud bastante altos, aun así el hecho de no hacer
+	uso de las máscaras presenta los problemas descritos anteriormente.
+
+	\section{Con máscaras}
+
+	En este apartado se llevará a cabo un análisis similar al realizado en el anterior, pero esta vez haciendo uso de las máscaras.
+	El hecho de utilizar máscaras reporta varios beneficios, entre ellos:
+	\begin{itemize}
+		\item Eliminar las recomendaciones basadas en el fondo de la imagen.
+		\item Eliminar las recomendaciones basadas en el color de la prenda.
+		\item Eliminar las recomendaciones basadas en el modelo que viste las prendas.
+		\item Eliminar recomendaciones basadas en marcas de agua que pueda tener la imagen.
+	\end{itemize}
+	Es decir, las máscaras permiten al sistema recomendar únicamente en base a las prendas, sin tener en cuenta otros factores propios de las imágenes.
+	A continuación, algunos ejemplos.
+
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones con uso de máscaras}}
+		{\includegraphics[scale=0.6]{recomendacion4.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 88'56 \\
+				Segunda recomendación & 88'54 \\
+				Tercera recomendación & 86'57 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones con uso de máscaras}}
+		{\includegraphics[scale=0.6]{recomendacion3.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 88'99 \\
+				Segunda recomendación & 88'03 \\
+				Tercera recomendación & 87'66 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	Es fácil observar que los resultados de hacer uso de la máscara son claramente beneficiosos para el modelo de recomendación de imágenes.
+	En primer lugar, las prendas recomendadas no tienen el mismo color que la original, tampoco la misma marca de agua o fondo. Además, los modelos
+	no tienen ningún parecido entre sí. Otro indicador de la mejora de la recomendación es el porcentaje de similitud, que sube en torno al 10\%.
+	Y, aunque puede tratarse de un aspecto subjetivo, las prendas son más parecidas entre sí, aunque no tengan el mismo color.
+
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Gráfica de Similitud Coseno}}
+		{\includegraphics[scale=0.9]{grafica-similitud.png}}
+	\end{figure}
+
+	\begin{table}[H]
+    \centering
+    \caption{Medias de similitud coseno de imágenes}
+    \begin{tabular}{lcc}
+        & \multicolumn{2}{c}{Similitud Coseno Media (\%)} \\
+        \cmidrule{2-3}
+        & Con Máscara & Sin Máscara \\
+        \midrule
+        \multirow{2}{*}{\includegraphics[width=0.8cm]{miniatura2.jpg}} & 87.89 & 75.27 \\
+        &  &  \\
+        \midrule
+        \multirow{2}{*}{\includegraphics[width=0.8cm]{miniatura1.jpg}} & 88.23 & 78.19 \\
+        &  &  \\
+        \bottomrule
+    \end{tabular}
+	\end{table}
+
+	\section{Uso de atributos}
+
+	En este apartado se analiza el uso de los atributos en las recomendaciones y como estos afectan a la calidad
+	de estas. En el siguiente ejemplo se selecciona el atributo ``blazer'' (chaqueta) para ejemplificar le uso de estos.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones con selección del atributo ``blazer''}}
+		{\includegraphics[scale=0.6]{atributos1.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 87'79 \\
+				Segunda recomendación & 87'23 \\
+				Tercera recomendación & 86'79 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	Se puede observar que los porcentajes de similitud coseno siguen siendo buenos, a la altura de los anteriores. Además 
+	podemos comprobar que todas las recomendaciones tienen el atributo ``blazer'' solicitado. 
+	
+	Ahora vamos a probar a añadir otro atributo a la consulta. Este atributo será ``loose (fit)''.
+	\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones con selección de los atributos ``blazer'' y ``loose (fit)''}}
+		{\includegraphics[scale=0.6]{atributos2.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 84'06 \\
+				Segunda recomendación & 84'05 \\
+				Tercera recomendación & 83'57 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	Por último vamos a añadir el atributo ``geometric textile pattern''.
+
+		\begin{figure}[H]
+		\ffigbox[\FBwidth]
+		{\caption{Recomendaciones con selección de los atributos ``blazer'' , ``loose (fit)'' y ``geometric textile pattern''}}
+		{\includegraphics[scale=0.8]{atributos3.png}}
+	\end{figure}
+	\begin{table}[H]
+		\centering
+		\caption{Tabla de similitud de recomendaciones}
+		\begin{tabular}{ll}
+				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\midrule
+				Primera recomendación & 67.12 \\
+				Segunda recomendación & 55.89 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	Como podemos comprobar a través de estos resultados, el uso de los atributos es un arma de doble filo. Resulta muy útil, pero se sacrifica porcentaje de similitud.
+	Esto se debe a que cuantos más atributos queramos menos imágenes hay en el \textit{dataset} que contengan estos atributos, de hecho en el último ejemplo
+	solo hay dos de ellas. Si tuvieramos un \textit{dataset} de un tamaño mucho mayor, como así sería en un ejemplo práctico en la vida real, este problema no se daría
+	tan pronto. Aun así la selección de atributos resulta de gran utilidad.
+
+	\chapter{Conclusiones}
+
+	En este capítulo se llevarán a cabo las conclusiones generales del trabajo realizado.
+	Se hará un análisis que consistirá en comprobar si los objetivos iniciales han sido cumplidos.
+
+	El objetivo principal de este trabajo era crear una interfaz gráfica que fuera capaz de recomendar imágenes de ropa
+	a partir de, no solo una imagen dada por el usuario, sino también una serie de atributos deseados en esta recomendación.
+	Este objetivo se ha podido cumplir por completo. Además se planteaban los siguientes subobjetivos:
+	\begin{itemize}
+		\item Desarrollar un modelo de inteligencia artificial que sea capaz de recomendar imágenes en base a atributos multimodalaes y otra imagen.
+		\item Etiquetar las imágenes a utilizar con sus respectivos atributos.
+		\item Crear una API que permita la comunicación entre el modelo previamente mencionado y una interfaz.
+		\item Diseñar una interfaz intuitiva que permita a los usuarios cargar una imagen, seleccionar los atributos de interés y visualizar los resultados proporcionados por el modelo.
+	\end{itemize}
+	Se ha conseguido construir una aplicación web que lleva a cabo las tareas descritas anteriormente, por lo que se concluye que el trabajo
+	ha sido exitoso. 
+
+	La arquitectura VGG16 ha resultado ser útil para extraer las características de las imágenes. Esta ha sido efectiva y eficaz.
+	El uso de máscaras, aunque haya ocasionado una solución más compleja debido a la tarea de segmentación, ha resultado aportar
+	claras mejoras al modelo de recomendación. Las imágenes recomendadas dejan de estar influidas por aspectos ajenos a las prendas,
+	como pueden ser el fondo de la imagen, marcas de agua o el aspecto físico de los modelos. Gracias a la combinación de la segmentación
+	de las imágenes para la realización de las máscaras y la extracción de características de las imágenes, para el posterior cálculo de
+	su similitud coseno, se ha podido llegar a obtener unos porcentajes de similitud muy buenos para las recomendaciones.
+
+	El uso de los atributos también ha sido un éxito. El modelo es capaz de filtrar el conjunto de datos y recomendar únicamente las prendas
+	que contienen estos. Aun así, cuando se usan excesivos atributos juntos o se seleccionan algunos poco comunes, el modelo puede tener problemas
+	recomendando debido al tamaño, no demasiado grande, del conjunto de datos.
+
+	En conclusión, este trabajo ha sido exitoso, ya que ha cumplido a la perfección con los objetivos propuestos, brindando una interfaz limpia que es capaz
+	de servir un sistema de recomendación de imágenes con un gran porcentaje de similitud en las recomendaciones que aporta. Además, se ha podido introducir el uso de
+	atributos, lo cual permite a los usuarios obtener recomendaciones más precisas y ajustadas a sus deseos. Si se contara con un conjunto de
+	datos más grande esta última funcionalidad sería aún más precisa.
+
+	\chapter{Trabajos futuros}
+	
+	El campo de la visión por computadora podría decirse que es relativamente nuevo. Es por ello que hay mucho margen de mejora y se pueden plantear
+	una variedad de futuros trabajos a partir de este. Algunos de ellos son:
+	\begin{itemize}
+		\item Ampliar la base de datos sobre la que se trabaja, ya que a mayor cantidad de datos disponibles mayor será la calidad de las recomendaciones.
+		\item Implementación de una red neuronal más enfocada en la ropa y no tan generalista como la arquitectura VGG16. Entrenar una red que se enfoque en
+		prendas en específico podrá ayudar a obtener mejores recomendaciones.
+		\item Añadir \textit{feedback} de usuarios reales mientras se entrena la red podría ser de gran utilidad, ya que la calidad de las recomendaciones es muchas veces
+		subjetiva al gusto del usuario.
+		\item Posibilidad de utilizar la cámara del dispositivo desde el que se acceda a la aplicación web con el fin de hacer más fácil la recomendación
+		\item Permitir al usuario dar más de una imagen para obtener resultados conjuntos
+		\item Permitir al usuario elegir los colores de la recomendación
+	\end{itemize}
+
+	\chapter{Planificación y presupuestos}
+
+	\section{Planificación}
+
+
+	En este apartado se presenta la planificación que se ha llevado a cabo para la realización de este proyecto.
+	La planificación ha consistido en las siguientes etapas:
+	\begin{itemize}
+		\item \textbf{Análisis del conjunto de datos.} 
+		
+		Esta etapa consistió en analizar el conjunto de datos, prepararlo para su uso y ver como se podía hacer uso de este. Se
+		llevaron a cabo estadísticas que ayudaron al posterior diseño de la solución. Esta fase duró siete días.
+		\item \textbf{Análisis de las técnicas posibles para la implementación del modelo y de la aplicación web.} 
+		
+		En esta etapa se analizan las diferentes tecnologías posibles para la resolución del problema. Se investiga
+		cuales son las mejores técnicas para el modelo de segmentación, de extracción de características y se exploran las diferentes tecnologías web.
+		Esta fase duró siete días.
+		\item \textbf{Diseño de la solución.} 
+		
+		Se diseña la mejor solución a partir del análisis de tecnologías previamente hecho. Esta fase duró once días
+		\item \textbf{Desarrollo, pruebas y mejoras.}
+		
+		Esta es la etapa más larga del proyecto, que consiste en el desarrollo. Una vez se finaliza el desarrollo
+		del proyecto se itera a través de pruebas y se mejora la solución. 
+		Esta fase duró cincuenta días.
+		\item \textbf{Elaboración de la memoria.}
+		
+		Esta etapa consiste en documentar el trabajo realizado y duró treinta días.
+	\end{itemize}
+
+	Dadas estas etapas se puede estimar que el proyecto se ha elaborado en un total de 105 días. Cada uno de estos días se ha trabajado un total de
+	ocho horas, lo que supone que el proyecto ha requerido 840 horas de trabajo. En la siguiente tabla se muestran las fechas detalladas
+	de la planificación del proyecto.
+
+	\begin{table}[H]
+		\centering
+		\caption{Planificación del proyecto}
+		\begin{tabular}{llll}
+				\toprule
+				\textbf{Fase} & \textbf{Duración (días)} & \textbf{Inicio} & \textbf{Fin}\\
+				\midrule
+				\textbf{Análisis del conjunto de datos} & 7 & 15/05/2023 & 22/05/2023  \\
+				\textbf{Análisis de técnicas y algoritmos} & 7 & 23/05/2023 & 30/05/2023 \\
+				\textbf{Diseño de la solución} & 11 & 31/05/2023 & 11/06/2023 \\
+				\textbf{Desarrollo, pruebas y mejoras} & 50 & 12/06/2023 & 31/07/2023 \\
+				\textbf{Elaboración de la memoria} & 30 & 01/08/2023 & 31/08/2023 \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	\section{Presupuestos}
+	
+	\subsection{Coste del personal}
+	Este trabajo ha sido realizado por un solo ingeniero. Un ingeniero informático junior tiene un sueldo promedio en España
+	de 2.208 €/mes \cite{sueldo}, lo que supone un sueldo de 13,8 €/hora. Se han trabajado ocho horas diarias por lo que el sueldo
+	diario sería de 110,4 €.
+
+	\begin{table}[H]
+		\centering
+		\caption{Planificación del proyecto}
+		\begin{tabular}{llll}
+				\toprule
+				\textbf{Empleado} & \textbf{Días de trabajo} & \textbf{Sueldo diario} & \textbf{Coste total}\\
+				\midrule
+				Ingeniero junior & 105 & 110,4 € & 11.592 €  \\
+				\bottomrule
+		\end{tabular}
+	\end{table}
+
+	\subsection{Coste del equipo}
+	El coste del equipo consiste en un ordenador de sobremesa y un portátil, teniendo en cuenta su uso.
+	Para el cálculo del coste estimado teniendo en cuenta su uso se aplica la siguiente fórmula:
+
+	\begin{equation}
+		\text{Coste imputable} = \frac{\text{Tiempo de uso}}{\text{Tiempo de vida}} * \text{Coste total}
+	\end{equation}
+
+	\begin{itemize}
+		\item \textbf{Ordenador de sobremesa}. Uso de ochenta horas con un coste total de 450 €
+		\item \textbf{Portátil}. Uso de veinticinco horas con un coste total de 849,25 €
+		\item \textbf{Teclado}. Uso de ochenta horas con un coste de 95 €
+		\item \textbf{Monitor}. Uso de ochenta horas con un coste 240 €
+	\end{itemize}
+
+	\begin{table}[H]
+		\centering
+		\caption{Costes materiales}
+		\begin{tabular}{lllll}
+				\toprule
+				\textbf{Concepto} & \textbf{Coste total (€)} & \textbf{Horas de uso} & \textbf{Tiempo de vida} & \textbf{Coste imputable (€)}\\
+				\midrule
+				Ordenador de sobremesa & 450 & 80 & 1.200  & 30 \\
+				Portátil & 849,25 & 25 & 800  & 26,54 \\
+				Teclado & 95 & No aplica & No aplica  & 95 \\
+				Monitor & 240 & No aplica & No aplica  & 240 \\
+				\bottomrule
+				\textbf{Total} & 1634,25 & & & 390,54
+		\end{tabular}
+	\end{table}
+
+	\subsection{Costes directos}
+	Los costes directos incluyen los costes del personal y los costes del equipo.
+	\begin{table}[H]
+		\centering
+		\caption{Costes directos}
+		\begin{tabular}{ll}
+				\toprule
+				\textbf{Descripción} & \textbf{Coste (€)}\\
+				\midrule
+				Costes de personal & 11.592  \\
+				Costes de equipo & 390,54  \\
+				\bottomrule
+				\textbf{Total} & 11.982,54
+		\end{tabular}
+	\end{table}
+	\subsection{Costes indirectos}
+	Los costes indirectos incluyen gastos como agua, luz, gas, alquiler. Se estima que los costes indirectos son un 15\% del total
+	de los costes directos, lo que supone un total de 1797,38 €.
+	\subsection{Costes totales}
+
+	Los costes totales son la suma de todos los costes descritos anteriormente.
+	\begin{table}[H]
+		\centering
+		\caption{Costes directos}
+		\begin{tabular}{ll}
+				\toprule
+				\textbf{Descripción} & \textbf{Coste (€)}\\
+				\midrule
+				Costes directos & 11.982,54  \\
+				Costes indirectos & 1.797,38  \\
+				\bottomrule
+				\textbf{Total} & 13.779,92
+		\end{tabular}
+	\end{table}
+	Por lo tanto se concluye que el coste total del proyecto estimado es de 13.779,92 €.
+
+
 %	BIBLIOGRAFÍA
 %----------	
 
@@ -509,9 +1308,8 @@ hmargin=3cm
 %----------	
 
 % Si tu trabajo incluye anexos, puedes descomentar las siguientes líneas
-%\chapter* {Anexo x}
-%\pagenumbering{gobble} % Las páginas de los anexos no se numeran
-
+\chapter* {Anexo A: English summary}
+\pagenumbering{gobble} % Las páginas de los anexos no se numeran
 
 
 \end{document}

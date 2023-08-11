@@ -1,6 +1,38 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Peso de las ventas moda online sobre el total de los ingresos generados por las ventas de ropa en España de 2012 a 2022}}{1}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Peso de las ventas moda online sobre el total de los ingresos generados por las ventas de ropa en España de 2012 a 2022}}{1}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Detección de caras con el software OpenCV}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Detección de caras con el software OpenCV}}{5}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Red de Neuronas}}{6}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de imagen en el conjunto de datos\relax }}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplo de imagen antes y después de aplicar la máscara\relax }}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Arquitectura U2-Net}}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de creación de máscaras con la arquitectura U2-Net}}{11}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Estructura algoritmo VGG16}}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama del funcionamiento del modelo\relax }}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo de peteción al \textit {endpoint} ``/recommendations''\relax }}{14}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ejemplo de peteción al \textit {endpoint} ``/image/<id>''\relax }}{15}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{16}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente \textbf {attributesSearch}\relax }}{16}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente \textbf {header}\relax }}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Componente \textbf {imageUploader}\relax }}{17}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Pantalla inicial, subida de imagen\relax }}{18}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Selección del número de recomendaciones\relax }}{18}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Selección de atributos\relax }}{19}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Barra de carga mientras la API procesa la solicitud\relax }}{19}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Resultado del proceso. Recomendaciones.\relax }}{20}{figure.caption.25}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Recomendaciones sin uso de máscaras\relax }}{22}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Recomendaciones sin uso de máscaras\relax }}{23}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Recomendaciones con uso de máscaras\relax }}{24}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Recomendaciones con uso de máscaras\relax }}{24}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Gráfica de Similitud Coseno\relax }}{25}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Recomendaciones con selección del atributo ``blazer''\relax }}{26}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Recomendaciones con selección de los atributos ``blazer'' y ``loose (fit)''\relax }}{27}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Recomendaciones con selección de los atributos ``blazer'' , ``loose (fit)'' y ``geometric textile pattern''\relax }}{27}{figure.caption.41}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsfinish 
 \contentsfinish 

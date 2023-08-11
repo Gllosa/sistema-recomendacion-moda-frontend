@@ -21,5 +21,5 @@ export const getRecomendations = async (
 
   const response = await axios.post(`${API_URL}/recommendations`, formData);
 
-  return response.data.urls;
+  return response.data.images;
 };

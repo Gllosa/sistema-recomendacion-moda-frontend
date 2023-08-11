@@ -49,7 +49,7 @@
       \verb https://es.statista.com/estadisticas/1027850/cuota-de-venta-de-prendas-de-ropa-por-internet-en-espana/
       \endverb
     \endentry
-    \entry{imaterialist-fashion-2020-fgvc7}{misc}{}
+    \entry{imaterialist}{misc}{}
       \name{author}{6}{}{%
         {{hash=2d0715b8739821dd7b93a687b0ef8aa0}{%
            family={Kaeser-Chen},
@@ -224,6 +224,274 @@
       \endverb
       \verb{url}
       \verb https://commons.wikimedia.org/wiki/File:Face_detection_example_openCV.jpg
+      \endverb
+    \endentry
+    \entry{red}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=77097be61ee0735f8c0a1f03fbdfeb4a}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={Ligdi},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {https://aprendeia.com/}%
+      }
+      \strng{namehash}{77097be61ee0735f8c0a1f03fbdfeb4a}
+      \strng{fullhash}{77097be61ee0735f8c0a1f03fbdfeb4a}
+      \strng{bibnamehash}{77097be61ee0735f8c0a1f03fbdfeb4a}
+      \strng{authorbibnamehash}{77097be61ee0735f8c0a1f03fbdfeb4a}
+      \strng{authornamehash}{77097be61ee0735f8c0a1f03fbdfeb4a}
+      \strng{authorfullhash}{77097be61ee0735f8c0a1f03fbdfeb4a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué son las Redes Neuronales Artificiales?}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://aprendeia.com/que-son-las-redes-neuronales-artificiales/
+      \endverb
+      \verb{url}
+      \verb https://aprendeia.com/que-son-las-redes-neuronales-artificiales/
+      \endverb
+    \endentry
+    \entry{stanford-paper}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d95c09515edab1d478c11b46b7f4f2fc}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Luyang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=bac6a7a5d8c835c2ebe5288a6fe722b4}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=083dc1f86e098e342aed49f922553a23}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Heqing},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{5b6b10ec4c5b5511e9e040326c105167}
+      \strng{fullhash}{5b6b10ec4c5b5511e9e040326c105167}
+      \strng{bibnamehash}{5b6b10ec4c5b5511e9e040326c105167}
+      \strng{authorbibnamehash}{5b6b10ec4c5b5511e9e040326c105167}
+      \strng{authornamehash}{5b6b10ec4c5b5511e9e040326c105167}
+      \strng{authorfullhash}{5b6b10ec4c5b5511e9e040326c105167}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Image-based Product Recommendation System with Convolutional Neural Networks}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://cs231n.stanford.edu/reports/2017/pdfs/105.pdf
+      \endverb
+      \verb{url}
+      \verb http://cs231n.stanford.edu/reports/2017/pdfs/105.pdf
+      \endverb
+    \endentry
+    \entry{image-based-paper}{article}{}
+      \name{author}{3}{}{%
+        {{hash=389c71cb4306b1d9f6e0a1937156fbe1}{%
+           family={Ullah},
+           familyi={U\bibinitperiod},
+           given={Farhan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=877fc8355fcb41e5da1aa583d4859f16}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Bofeng},
+           giveni={B\bibinitperiod}}}%
+        {{hash=dc02813cc8c7ec533be479d39a84e5c9}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Rehan\bibnamedelima Ullah},
+           giveni={R\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+      }
+      \strng{namehash}{40c65e2f6450711cda5ca1cf63bf6c1a}
+      \strng{fullhash}{40c65e2f6450711cda5ca1cf63bf6c1a}
+      \strng{bibnamehash}{40c65e2f6450711cda5ca1cf63bf6c1a}
+      \strng{authorbibnamehash}{40c65e2f6450711cda5ca1cf63bf6c1a}
+      \strng{authornamehash}{40c65e2f6450711cda5ca1cf63bf6c1a}
+      \strng{authorfullhash}{40c65e2f6450711cda5ca1cf63bf6c1a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Image-Based Service Recommendation System: A JPEG-Coefficient RFs Approach}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{3308\bibrangedash 3318}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2019.2962315
+      \endverb
+    \endentry
+    \entry{u2net}{article}{}
+      \name{author}{6}{}{%
+        {{hash=476b4e92042b91ac7e9277822eb21f17}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Xuebin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6166e3ac6880903dca34e9ad84074f8e}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zichen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=70966613b949d5835083430f00bf04a0}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Chenyang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e043c2e05e419feb1a58c74e8376191a}{%
+           family={Dehghan},
+           familyi={D\bibinitperiod},
+           given={Masood},
+           giveni={M\bibinitperiod}}}%
+        {{hash=582ca6ab886b323a15386f46026a71b9}{%
+           family={Zaiane},
+           familyi={Z\bibinitperiod},
+           given={Osmar\bibnamedelima R.},
+           giveni={O\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=05eeff893c5c68b7d580cc373fca1938}{%
+           family={Jagersand},
+           familyi={J\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arxiv.org/}%
+      }
+      \strng{namehash}{5a240a26af6830a2a7ab09837517823c}
+      \strng{fullhash}{eca3f18be1962c35889bdea122881de1}
+      \strng{bibnamehash}{f5a38be312fac8b682a906b00631a819}
+      \strng{authorbibnamehash}{f5a38be312fac8b682a906b00631a819}
+      \strng{authornamehash}{5a240a26af6830a2a7ab09837517823c}
+      \strng{authorfullhash}{eca3f18be1962c35889bdea122881de1}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{U-2-Net: Going Deeper with Nested U-Structure for Salient Object Detection}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2005.09007.pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2005.09007.pdf
+      \endverb
+    \endentry
+    \entry{u2net-gh}{article}{}
+      \name{author}{6}{}{%
+        {{hash=476b4e92042b91ac7e9277822eb21f17}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Xuebin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6166e3ac6880903dca34e9ad84074f8e}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zichen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=70966613b949d5835083430f00bf04a0}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Chenyang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e043c2e05e419feb1a58c74e8376191a}{%
+           family={Dehghan},
+           familyi={D\bibinitperiod},
+           given={Masood},
+           giveni={M\bibinitperiod}}}%
+        {{hash=582ca6ab886b323a15386f46026a71b9}{%
+           family={Zaiane},
+           familyi={Z\bibinitperiod},
+           given={Osmar\bibnamedelima R.},
+           giveni={O\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=05eeff893c5c68b7d580cc373fca1938}{%
+           family={Jagersand},
+           familyi={J\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {github.com/}%
+      }
+      \strng{namehash}{5a240a26af6830a2a7ab09837517823c}
+      \strng{fullhash}{eca3f18be1962c35889bdea122881de1}
+      \strng{bibnamehash}{f5a38be312fac8b682a906b00631a819}
+      \strng{authorbibnamehash}{f5a38be312fac8b682a906b00631a819}
+      \strng{authornamehash}{5a240a26af6830a2a7ab09837517823c}
+      \strng{authorfullhash}{eca3f18be1962c35889bdea122881de1}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{U-2-Net}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/xuebinqin/U-2-Net
+      \endverb
+      \verb{url}
+      \verb https://github.com/xuebinqin/U-2-Net
+      \endverb
+    \endentry
+    \entry{vgg}{article}{}
+      \list{publisher}{1}{%
+        {datascientest.com}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{VGG: ¿Qué es este modelo? ¡Daniel te lo cuenta todo!}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://datascientest.com/es/vgg-que-es-este-modelo-daniel-te-lo-cuenta-todo
+      \endverb
+      \verb{url}
+      \verb https://datascientest.com/es/vgg-que-es-este-modelo-daniel-te-lo-cuenta-todo
+      \endverb
+    \endentry
+    \entry{sueldo}{article}{}
+      \list{publisher}{1}{%
+        {talent.com}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Salario medio para Ingeniero Informático en España, 2023}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://es.talent.com/salary?job=ingeniero+inform%C3%A1tico
+      \endverb
+      \verb{url}
+      \verb https://es.talent.com/salary?job=ingeniero+inform%C3%A1tico
+      \endverb
+    \endentry
+    \entry{cnn-ibm}{misc}{}
+      \list{publisher}{1}{%
+        {IBM}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué son las redes neuronales convolucionales?}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/topics/convolutional-neural-networks
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/topics/convolutional-neural-networks
       \endverb
     \endentry
   \enddatalist
