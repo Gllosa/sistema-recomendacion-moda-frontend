@@ -256,6 +256,49 @@
       \verb https://aprendeia.com/que-son-las-redes-neuronales-artificiales/
       \endverb
     \endentry
+    \entry{vgg16-paper}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=9d16b7284df92c9adaee86c37ab992df}{%
+           family={Simonyan},
+           familyi={S\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c72fc39e94030f67717052309266a44d}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{fullhash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{bibnamehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{authorbibnamehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{authornamehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{authorfullhash}{25d2f3c4577a6632d37f0126cc781232}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Very Deep Convolutional Networks for Large-Scale Image Recognition}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1409.1556
+      \endverb
+    \endentry
+    \entry{art-vgg}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{VGG-16 | CNN model}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/vgg-16-cnn-model/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/vgg-16-cnn-model/
+      \endverb
+    \endentry
     \entry{stanford-paper}{article}{}
       \name{author}{3}{}{%
         {{hash=d95c09515edab1d478c11b46b7f4f2fc}{%
@@ -283,8 +326,8 @@
       \strng{authorbibnamehash}{5b6b10ec4c5b5511e9e040326c105167}
       \strng{authornamehash}{5b6b10ec4c5b5511e9e040326c105167}
       \strng{authorfullhash}{5b6b10ec4c5b5511e9e040326c105167}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Image-based Product Recommendation System with Convolutional Neural Networks}
@@ -320,8 +363,8 @@
       \strng{authorbibnamehash}{40c65e2f6450711cda5ca1cf63bf6c1a}
       \strng{authornamehash}{40c65e2f6450711cda5ca1cf63bf6c1a}
       \strng{authorfullhash}{40c65e2f6450711cda5ca1cf63bf6c1a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -377,8 +420,8 @@
       \strng{authornamehash}{5a240a26af6830a2a7ab09837517823c}
       \strng{authorfullhash}{eca3f18be1962c35889bdea122881de1}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{U-2-Net: Going Deeper with Nested U-Structure for Salient Object Detection}
@@ -450,8 +493,8 @@
       \list{publisher}{1}{%
         {datascientest.com}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{VGG: ¿Qué es este modelo? ¡Daniel te lo cuenta todo!}
       \field{year}{2022}
@@ -466,8 +509,8 @@
       \list{publisher}{1}{%
         {talent.com}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{Salario medio para Ingeniero Informático en España, 2023}
       \field{year}{2023}
@@ -482,8 +525,8 @@
       \list{publisher}{1}{%
         {IBM}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{title}{¿Qué son las redes neuronales convolucionales?}
       \true{nocite}

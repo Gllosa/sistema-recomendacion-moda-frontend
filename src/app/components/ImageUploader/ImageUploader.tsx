@@ -1,15 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import {
-  Box,
-  IconButton,
-  Typography,
-  Paper,
-  Divider,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-} from "@mui/material";
+import { Box, IconButton, Typography, Paper, Divider } from "@mui/material";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ImageUploaderProps } from "./imageUploader.interfaces";

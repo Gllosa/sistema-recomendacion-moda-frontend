@@ -7,7 +7,15 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ImageUploader from "../ImageUploader/ImageUploader";
 import { useState } from "react";
-import { Alert, LinearProgress, Paper, Slider, Snackbar } from "@mui/material";
+import {
+  Alert,
+  Divider,
+  IconButton,
+  LinearProgress,
+  Paper,
+  Slider,
+  Snackbar,
+} from "@mui/material";
 import { getRecomendations } from "@/app/services/services";
 import { getImageUrl } from "@/app/utils";
 import ImageGallery from "react-image-gallery";
@@ -138,15 +146,49 @@ export default function MyStepper() {
           <Box>
             {!loading ? (
               recomendations.length > 0 ? (
-                <ImageGallery
-                  showBullets
-                  items={recomendations.map((id) => {
-                    return {
-                      original: getImageUrl(id),
-                      thumbnail: getImageUrl(id),
-                    };
-                  })}
-                />
+                <Box display="flex" ml={0}>
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      maxWidth: "200px",
+                      margin: "0 0",
+                      height: "fit-content",
+                    }}
+                  >
+                    <Divider />
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        maxWidth: "100%",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                        overflow: "hidden",
+                      }}
+                    >
+                      Imagen original
+                    </Typography>
+                    <img
+                      src={URL.createObjectURL(file)}
+                      alt="user-image"
+                      style={{
+                        objectFit: "contain",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                      }}
+                    />
+                  </Paper>
+                  <Box ml="10rem">
+                    <ImageGallery
+                      showBullets
+                      items={recomendations.map((id) => {
+                        return {
+                          original: getImageUrl(id),
+                          thumbnail: getImageUrl(id),
+                        };
+                      })}
+                    />
+                  </Box>
+                </Box>
               ) : (
                 <Snackbar
                   anchorOrigin={{ horizontal: "center", vertical: "bottom" }}
