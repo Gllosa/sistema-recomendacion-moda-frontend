@@ -7,31 +7,31 @@
 \contentsline {section}{\numberline {1.5}Estructura del documento}{3}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Estado del arte}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Visión por computadora}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Redes de Neuronas Convolucionales}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Redes de neuronas convolucionales}{6}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Extracción de características}{7}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Segmentación de imágenes}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Segmentación de imágenes}{8}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Trabajos similares}{8}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Diseño del sistema}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Conjunto de datos}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Modelo}{10}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Segmentación}{10}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Algoritmo de recomendación}{13}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}API}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Interfaz}{16}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Tecnologías empleadas}{21}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Resultados}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Sin máscaras}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Con máscaras}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Uso de atributos}{28}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{31}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Trabajos futuros}{33}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Planificación y presupuestos}{34}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Planificación}{34}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Presupuestos}{35}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Coste del personal}{35}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Coste del equipo}{35}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Costes directos}{36}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Costes indirectos}{36}{subsection.7.2.4}%
-\contentsline {subsection}{\numberline {7.2.5}Costes totales}{36}{subsection.7.2.5}%
-\contentsline {chapter}{Bibliografía}{37}{table.caption.48}%
+\contentsline {chapter}{\numberline {3}Diseño del sistema}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Conjunto de datos}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Modelo}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Segmentación}{11}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Algoritmo de recomendación}{14}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}API}{15}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Interfaz}{17}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Tecnologías empleadas}{22}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Resultados}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sin máscaras}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Con máscaras}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Uso de atributos}{29}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{32}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Trabajos futuros}{34}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Planificación y presupuestos}{35}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Planificación}{35}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Presupuestos}{36}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Coste del personal}{36}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Coste del equipo}{36}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Costes directos}{37}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Costes indirectos}{37}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}Costes totales}{37}{subsection.7.2.5}%
+\contentsline {chapter}{Bibliografía}{38}{table.caption.48}%
 \contentsfinish 

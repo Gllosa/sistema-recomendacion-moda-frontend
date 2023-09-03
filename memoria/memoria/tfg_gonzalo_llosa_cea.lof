@@ -6,32 +6,32 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Red de Neuronas}}{6}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Estructura VGG16}}{7}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de imagen en el conjunto de datos\relax }}{9}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplo de imagen antes y después de aplicar la máscara\relax }}{10}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Arquitectura U2-Net}}{12}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de creación de máscaras con la arquitectura U2-Net}}{12}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Estructura algoritmo VGG16}}{13}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama del funcionamiento del modelo\relax }}{14}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo de peteción al \textit {endpoint} ``/recommendations''\relax }}{15}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ejemplo de peteción al \textit {endpoint} ``/image/<id>''\relax }}{16}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{17}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente \textbf {attributesSearch}\relax }}{17}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente \textbf {header}\relax }}{17}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Componente \textbf {imageUploader}\relax }}{18}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Pantalla inicial, subida de imagen\relax }}{19}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Selección del número de recomendaciones\relax }}{19}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Selección de atributos\relax }}{20}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Barra de carga mientras la API procesa la solicitud\relax }}{20}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Resultado del proceso. Recomendaciones.\relax }}{21}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de imagen en el conjunto de datos\relax }}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplo de imagen antes y después de aplicar la máscara\relax }}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Arquitectura U2-Net}}{13}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de creación de máscaras con la arquitectura U2-Net}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Estructura algoritmo VGG16}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama del funcionamiento del modelo\relax }}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo de peteción al \textit {endpoint} ``/recommendations''\relax }}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ejemplo de peteción al \textit {endpoint} ``/image/<id>''\relax }}{17}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{18}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Componente \textbf {attributesSearch}\relax }}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Componente \textbf {header}\relax }}{18}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Componente \textbf {imageUploader}\relax }}{19}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Pantalla inicial, subida de imagen\relax }}{20}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Selección del número de recomendaciones\relax }}{20}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Selección de atributos\relax }}{21}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Barra de carga mientras la API procesa la solicitud\relax }}{21}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Resultado del proceso. Recomendaciones.\relax }}{22}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Recomendaciones sin uso de máscaras\relax }}{24}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Recomendaciones sin uso de máscaras\relax }}{25}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Recomendaciones con uso de máscaras\relax }}{26}{figure.caption.32}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Recomendaciones con uso de máscaras\relax }}{26}{figure.caption.34}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Gráfica de Similitud Coseno\relax }}{27}{figure.caption.36}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Recomendaciones con selección del atributo ``blazer''\relax }}{28}{figure.caption.38}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Recomendaciones con selección de los atributos ``blazer'' y ``loose (fit)''\relax }}{29}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Recomendaciones con selección de los atributos ``blazer'' , ``loose (fit)'' y ``geometric textile pattern''\relax }}{29}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Recomendaciones sin uso de máscaras\relax }}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Recomendaciones sin uso de máscaras\relax }}{26}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Recomendaciones con uso de máscaras\relax }}{27}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Recomendaciones con uso de máscaras\relax }}{28}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Gráfica de Similitud Coseno\relax }}{29}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Recomendaciones con selección del atributo ``blazer''\relax }}{30}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Recomendaciones con selección de los atributos ``blazer'' y ``loose (fit)''\relax }}{30}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Recomendaciones con selección de los atributos ``blazer'' , ``loose (fit)'' y ``geometric textile pattern''\relax }}{31}{figure.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

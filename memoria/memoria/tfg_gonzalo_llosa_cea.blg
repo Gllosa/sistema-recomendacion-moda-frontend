@@ -1,14 +1,14 @@
-[0] Config.pm:306> INFO - This is Biber 2.18
-[0] Config.pm:309> INFO - Logfile is 'tfg_gonzalo_llosa_cea.blg'
-[292] biber-MSWIN32:340> INFO - === 
-[355] Biber.pm:418> INFO - Reading 'tfg_gonzalo_llosa_cea.bcf'
-[584] Biber.pm:975> INFO - Using all citekeys in bib section 0
-[613] Biber.pm:4401> INFO - Processing section 0
-[636] Biber.pm:4592> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
-[714] bibtex.pm:1713> INFO - LaTeX decoding ...
-[746] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
-[973] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[974] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[974] Biber.pm:4221> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[1018] bbl.pm:654> INFO - Writing 'tfg_gonzalo_llosa_cea.bbl' with encoding 'UTF-8'
-[1035] bbl.pm:757> INFO - Output to tfg_gonzalo_llosa_cea.bbl
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'tfg_gonzalo_llosa_cea.blg'
+[137] biber-MSWIN64:340> INFO - === 
+[201] Biber.pm:419> INFO - Reading 'tfg_gonzalo_llosa_cea.bcf'
+[369] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[387] Biber.pm:4419> INFO - Processing section 0
+[401] Biber.pm:4610> INFO - Looking for bibtex file 'bibliografia/bibliografia.bib' for section 0
+[478] bibtex.pm:1713> INFO - LaTeX decoding ...
+[506] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia/bibliografia.bib'
+[675] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[676] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[676] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[700] bbl.pm:660> INFO - Writing 'tfg_gonzalo_llosa_cea.bbl' with encoding 'UTF-8'
+[716] bbl.pm:763> INFO - Output to tfg_gonzalo_llosa_cea.bbl

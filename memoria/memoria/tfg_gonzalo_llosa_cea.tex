@@ -323,7 +323,7 @@ hmargin=3cm
 
 	\textbf{Palabras clave:}
 	% Escribir las palabras clave aquí
-	Red convolucional, visión por computadora, segmentación de imágenes, máscara, VGG16, U2-Net.
+	Red convolucional, visión por computadora, segmentación de imágenes, interfaz gráfica.
 	\vfill
 
 \end{abstract}
@@ -346,13 +346,14 @@ hmargin=3cm
 		
 		Once this model is developed, a web application is created to facilitate user-friendly and intuitive utilization. The model is served through an API, utilizing \textit{Flask}, for the web application built with \textit{React}.
 		
-		An assessment of the system's effectiveness is also conducted, analyzing similarity percentages between recommendations and the quality of these.
+		An assessment of the system's effectiveness is also conducted, analyzing similarity percentages between recommendations and their quality.
 		
-		This project holds significant relevance in the real world, potentially yielding a substantial impact on both online clothing business clientele and the customers themselves.
+		This project holds significant relevance in the real world, potentially yielding a substantial impact on both the clientele of online clothing businesses and the customers themselves.
 	
 		\textbf{Keywords:}
 		% Escribir las palabras clave aquí
-		Convolutional network, computer vision, images segmentation, mask, VGG16, U2-Net.
+		Convolutional network, computer vision, images segmentation, graphic interface.
+		Red convolucional, visión por computadora, segmentación de imágenes, interfaz gráfica.
 		\vfill
 
 	\end{abstract}
@@ -555,14 +556,14 @@ hmargin=3cm
 	la detección de objetos o la segmentación. Las redes de neuronas convolucionales se han convertido en el estándar para este campo
 	de la ciencia. Estas son capaces de ver patrones visuales que a un humano, se le harían complicados, si no imposibles, de ver.
 
-	\section{Redes de Neuronas Convolucionales}
+	\section{Redes de neuronas convolucionales}
 	Las redes neuronales están compuestas por diferentes capas, que a su vez están compuestas por diferentes neuronas. Todas las redes
 	tienen una capa de entrada, una o más capas intermedias y una capa de salida. Los nodos de las capas están conectados entre sí
 	y estos pueden activar o no, dependiendo del resultado de su función asociada, el nodo al que están conectados. 
 	\begin{figure}[H]
 		\ffigbox[\FBwidth]
 		{\caption[Red de Neuronas]{Red de Neuronas \cite{red}}}
-		{\includegraphics[scale=0.3]{red-neuronal.png}}
+		{\includegraphics[scale=0.4]{red-neuronal.png}}
 	\end{figure}
 	Las redes de neuronas convolucionales son las que se utilizan para tareas de visión por computadora. Estas redes son mucho más eficientes
 	a la hora de tratar con imágenes y esta es la razón por la que se usan en este campo del aprendizaje automático. En las primeras capas
@@ -577,7 +578,8 @@ hmargin=3cm
 		\item \textbf{Capa totalmente conectada:} en esta capa, a diferencia de las demás, todos los nodos están conectados a algún nodo
 		de la capa anterior. 
 	\end{itemize}
-	Existen varios tipos de redes de neuronas convolucionales, entre ellas: AlexNet, GoogleNet, ResNet, ZFNet o VGGNet.
+	Existen varios tipos de redes de neuronas convolucionales, entre ellas: AlexNet \cite{alexNet}, GoogleNet \cite{googleNet}, 
+	ResNet \cite{resNet}, ZFNet \cite{zfnet} o VGGNet \cite{vgg16-paper}.
 	Para la realización de este proyecto se ha optado por usar la última.
 
 	\section{Extracción de características}
@@ -589,12 +591,12 @@ hmargin=3cm
 		{\includegraphics[scale=0.3]{vgg-funcionamiento.jpg}}
 	\end{figure}
 
-	Este modelo consiguió un 92,7\% de aciertos en el set de datos ``ImageNet'', que contiene más de catorce millones de imágenes.
+	Este modelo consiguió un 92,7\% de aciertos en el set de datos ``ImageNet'' \cite{imageNet}, que contiene más de catorce millones de imágenes.
 	Es uno de los modelos más populares a la hora de trabajar con la extracción de características en imágenes. Es muy útil para
 	conseguir clasificar imagénes, o en el caso de este proyecto, para calcular similitud entre ellas.
 
 	La arquitectura VGG16 se ha elegido por varias razones. En primer lugar, esta está ampliamente documentada y es fácilmente accesible
-	a través de bibliotecas de \textit{Python}. Aún siendo una arquitectura más simple que las demás opciones esta contrastada como
+	a través de bibliotecas de \textit{Python}. Aún siendo una arquitectura más simple que las demás opciones está contrastada como
 	un modelo con un gran rendimiento en tareas de visión artificial, lo que la convierte en una elección sólida para un sistema de recomendación
 	de imágenes. Además, esta arquitectura probó ser la más eficaz en el artículo ``Image-based Product Recommendation System with Convolutional Neural
 	Networks'' \cite{stanford-paper}.
@@ -618,22 +620,30 @@ hmargin=3cm
 	\begin{itemize}
 		\item ``Image-based Product Recommendation System with Convolutional Neural
 		Networks'' \cite{stanford-paper}. En este artículo se describen las técnicas utilizadas para realizar un sistema de recomendación
-		para tiendas online basado en la similitud entre imágenes. Se prueban los algorítimos SVG, AlexNet y VGG. Tras evaluar los tres
+		para tiendas online basado en la similitud entre imágenes. Se prueban los algoritimos SVG, AlexNet y VGG. Tras evaluar los tres
 		este último resulta ser el más preciso. Una vez obtenidos los vectores de las imágenes se calcula la distancia coseno entre estos
-		para calcular la similitud entre ambas.
+		para calcular la similitud entre ambas. Este trabajo se relaciona fácilmente con el propuesto, ya que resuelve el problema haciendo uso del mismo
+		modelo de clasificación y el mismo algoritmo de recomendación.
 		\item ``Image-Based Service Recommendation System: A JPEG-Coefficient RFs Approach'' \cite{image-based-paper}. 
 		Este artículo consta de dos fases. En la primera tratan de clasificar las imágenes según el tipo de producto mientras 
 		que en la segunda se crea un sistema de recomendación que trata de encontrar los productos más similares a otro dado. 
 		Para la segunda fase, que es la que aplica en nuestro caso, se usan coeficientes JPEG para sacar las 
-		características de las imágenes. Después se calcula la distancia euclidiana entre estas.
+		características de las imágenes. Después se calcula la distancia euclidiana entre estas. Este otro trabajo propone una
+		manera diferente de resolver el objetivo a la utilizada en nuestro caso.
 	\end{itemize}
 
-	Este trabajo se diferencia en varios aspectos de los anteriores. No solo se busca una recomendación en base a una imagen inicial,
-	sino que también se permite al usuario seleccionar los atributos que quiere que tengan las imágenes recomendadas. Además de esta
-	principal diferencia este proyecto no se queda solo en un modelo, también
-	cuenta con una interfaz gráfica que permite a los usuarios hacer uso del modelo.
+	Este trabajo se diferencia en varios aspectos de los anteriores. En primer lugar, se añade el uso de máscaras para obtener recomendaciones
+	que no se vean influenciadas por factores ajenos a la prenda en sí. Además, no solo se busca una recomendación en base a una imagen inicial,
+	si no que también se permite al usuario seleccionar los atributos que quiere que tengan las imágenes recomendadas. A esta principal diferencia
+	se suma el hecho de que este proyecto no se queda solo en un modelo, también
+	cuenta con una interfaz gráfica que permite a los usuarios hacer uso de este. Este trbajo hace uso de arquitecturas de redes convolucionales ya existentes
+	y combina métodos ya explorados para crear un sistema de recomendación, pero no propone ningún avance desde el punto de vista de estas arquitecturas.
 
 	\chapter{Diseño del sistema}
+	Este apartado pretende abordar el diseño del sistema, detallando como las distintas partes de este funcionan y trabajan en conjunto para
+	resolver el problema propuesto. En primer lugar se describe el conjunto de datos empleado y posteriormente el modelo de inteligencia artificial.
+	Después, la API y como esta sirve para comunicar el modelo con la interfaz gráfica. Esta última se presenta a través de imágenes. Finalmente, se procede
+	a enumerar todas las tecnologías empleadas.
 	\section{Conjunto de datos}
 	Como se mencionó en el apartado ``Marco Reguador'' en este trabajo se hace uso del conjunto de datos 
 	``iMaterialist (Fashion) 2020 at FGVC7'' \cite{imaterialist}. Este conjunto de datos cuenta con varios archivos que se 
@@ -687,23 +697,23 @@ hmargin=3cm
 	\end{figure}
 
 	Como se puede observar en la figura, la máscara ha quitado todo excepto la prenda.
-	Todas estas máscaras son preprocesadas y almacenadas, ya que serán las que se usen para el modelo.
+	Todas estas máscaras son pre-procesadas y almacenadas, ya que serán las que se usen para el modelo.
 
 
 	Esto no es suficiente, ya que el usuario proporciona una imagen que no está en la base de datos, por lo que no se tiene la segmentación de esta.
 	Debido a este motivo es necesario hacer uso de un modelo de segmentación para generar la máscara de la imagen dada por el usuario.
 	Hay un gran número de arquitecturas que podrían resolver este problema. A continuación se describen algunas de ellas:
 	\begin{itemize}
-		\item \textbf{U-Net:} su nombre viene dado porque su arquitectura tiene forma de U, combina capas de convolución y deconvolución para conseguir la segmentación de las imágenes.
-		\item \textbf{SegNet:} utiliza capas de \textbf{pooling} para conseguir el objetivo de segmentar las imágenes.
-		\item \textbf{Mask R-CNN:} esta arquitectura es una combinación de \textbf{Faster R-CNN}, que sirve para la detección de objetos, con la generación de máscaras.
-		\item \textbf{DeepLab:} esta arquitectura utiliza la convolución dilatada para lograr el objetivo de segmentar las imágenes.
-		\item \textbf{U2-Net:} esta arquitectura es una extension de \textbf{U-Net} que incluye la generación de máscaras.
+		\item \textbf{U-Net \cite{unet}:} su nombre viene dado porque su arquitectura tiene forma de U, combina capas de convolución y deconvolución para conseguir la segmentación de las imágenes.
+		\item \textbf{SegNet \cite{segNet}:} utiliza capas de \textbf{pooling} para conseguir el objetivo de segmentar las imágenes.
+		\item \textbf{Mask R-CNN \cite{rcnn}:} esta arquitectura es una combinación de \textbf{Faster R-CNN}, que sirve para la detección de objetos, con la generación de máscaras.
+		\item \textbf{DeepLab \cite{deeplab}:} esta arquitectura utiliza la convolución dilatada para lograr el objetivo de segmentar las imágenes.
+		\item \textbf{U2-Net \cite{u2net}:} esta arquitectura es una extensión de \textbf{U-Net} que incluye mejoras sustanciales, mejora la precisión y el rendimiento.
 	\end{itemize}
 
 
-	Finalmente se elige hacer uso de la arquitectura \textbf{U2-Net}, que cuenta con todas las ventajas de \textbf{U-Net} y además esta 
-	adaptada para la creación de máscaras. Esta arquitectura tiene una gran precisión aún cuando actua sobre imágenes de alta resolución,
+	Finalmente se elige hacer uso de la arquitectura \textbf{U2-Net}, que cuenta con todas las ventajas de \textbf{U-Net} pero teniendo una mayor precisión 
+	y rendimiento. La precisión es aún mayor cuando actúa sobre imágenes de alta resolución,
 	lo que la convierte en una gran candidata para la segmentación de imágenes de moda.
 
 	\textbf{U2-Net} nació en el año 2020 en la universidad de Alberta, Canadá, con
@@ -954,17 +964,17 @@ hmargin=3cm
 	\begin{figure}[H]
 		\ffigbox[\FBwidth]
 		{\caption{Recomendaciones sin uso de máscaras}}
-		{\includegraphics[scale=0.5]{recomendacion1.png}}
+		{\includegraphics[scale=0.6]{recomendacion1.png}}
 	\end{figure}
 	\begin{table}[H]
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 75'75 \\
-				Segunda recomendación & 75'42 \\
-				Tercera recomendación & 74'65 \\
+				Primera recomendación & 0,7575 \\
+				Segunda recomendación & 0,7542 \\
+				Tercera recomendación & 0,7465 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -977,11 +987,11 @@ hmargin=3cm
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 79'51 \\
-				Segunda recomendación & 77'84 \\
-				Tercera recomendación & 77'23 \\
+				Primera recomendación & 0,7951 \\
+				Segunda recomendación & 0,7784 \\
+				Tercera recomendación & 0,7723 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -1006,17 +1016,17 @@ hmargin=3cm
 	\begin{figure}[H]
 		\ffigbox[\FBwidth]
 		{\caption{Recomendaciones con uso de máscaras}}
-		{\includegraphics[scale=0.6]{recomendacion4.png}}
+		{\includegraphics[scale=0.6]{recomendacion3.png}}
 	\end{figure}
 	\begin{table}[H]
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 88'56 \\
-				Segunda recomendación & 88'54 \\
-				Tercera recomendación & 86'57 \\
+				Primera recomendación & 0,8856 \\
+				Segunda recomendación & 0,8854 \\
+				Tercera recomendación & 0,8657 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -1024,17 +1034,17 @@ hmargin=3cm
 	\begin{figure}[H]
 		\ffigbox[\FBwidth]
 		{\caption{Recomendaciones con uso de máscaras}}
-		{\includegraphics[scale=0.6]{recomendacion3.png}}
+		{\includegraphics[scale=0.6]{recomendacion4.png}}
 	\end{figure}
 	\begin{table}[H]
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 88'99 \\
-				Segunda recomendación & 88'03 \\
-				Tercera recomendación & 87'66 \\
+				Primera recomendación & 0,8899 \\
+				Segunda recomendación & 0,8803 \\
+				Tercera recomendación & 0,8766 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -1054,14 +1064,14 @@ hmargin=3cm
     \centering
     \caption{Medias de similitud coseno de imágenes}
     \begin{tabular}{lcc}
-        & \multicolumn{2}{c}{Similitud Coseno Media (\%)} \\
+        & \multicolumn{2}{c}{Similitud Coseno Media} \\
         \cmidrule{2-3}
         & Con Máscara & Sin Máscara \\
         \midrule
-        \multirow{2}{*}{\includegraphics[width=0.8cm]{miniatura2.jpg}} & 87.89 & 75.27 \\
+        \multirow{2}{*}{\includegraphics[width=0.8cm]{miniatura2.jpg}} & 0,8789 & 0,7527 \\
         &  &  \\
         \midrule
-        \multirow{2}{*}{\includegraphics[width=0.8cm]{miniatura1.jpg}} & 88.23 & 78.19 \\
+        \multirow{2}{*}{\includegraphics[width=0.8cm]{miniatura1.jpg}} & 0,8823 & 0,7819 \\
         &  &  \\
         \bottomrule
     \end{tabular}
@@ -1080,11 +1090,11 @@ hmargin=3cm
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 87'79 \\
-				Segunda recomendación & 87'23 \\
-				Tercera recomendación & 86'79 \\
+				Primera recomendación & 0,8779 \\
+				Segunda recomendación & 0,8723 \\
+				Tercera recomendación & 0,8679 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -1102,11 +1112,11 @@ hmargin=3cm
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 84'06 \\
-				Segunda recomendación & 84'05 \\
-				Tercera recomendación & 83'57 \\
+				Primera recomendación & 0,8406 \\
+				Segunda recomendación & 0,8405 \\
+				Tercera recomendación & 0,8357 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -1122,10 +1132,10 @@ hmargin=3cm
 		\centering
 		\caption{Tabla de similitud de recomendaciones}
 		\begin{tabular}{ll}
-				\textbf{Recomendación} & \textbf{Porcentaje de Similitud Coseno (\%)} \\
+				\textbf{Recomendación} & \textbf{Similitud Coseno} \\
 				\midrule
-				Primera recomendación & 67.12 \\
-				Segunda recomendación & 55.89 \\
+				Primera recomendación & 0,6712 \\
+				Segunda recomendación & 0,5589 \\
 				\bottomrule
 		\end{tabular}
 	\end{table}
@@ -1148,39 +1158,50 @@ hmargin=3cm
 		\item Crear una API que permita la comunicación entre el modelo previamente mencionado y una interfaz.
 		\item Diseñar una interfaz intuitiva que permita a los usuarios cargar una imagen, seleccionar los atributos de interés y visualizar los resultados proporcionados por el modelo.
 	\end{itemize}
-	Se ha conseguido construir una aplicación web que lleva a cabo las tareas descritas anteriormente, por lo que se concluye que el trabajo
-	ha sido exitoso. 
+	Se ha conseguido construir una aplicación web que lleva a cabo todas las tareas descritas anteriormente.
 
 	La arquitectura VGG16 ha resultado ser útil para extraer las características de las imágenes. Esta ha sido efectiva y eficaz.
 	El uso de máscaras, aunque haya ocasionado una solución más compleja debido a la tarea de segmentación, ha resultado aportar
 	claras mejoras al modelo de recomendación. Las imágenes recomendadas dejan de estar influidas por aspectos ajenos a las prendas,
 	como pueden ser el fondo de la imagen, marcas de agua o el aspecto físico de los modelos. Gracias a la combinación de la segmentación
 	de las imágenes para la realización de las máscaras y la extracción de características de las imágenes, para el posterior cálculo de
-	su similitud coseno, se ha podido llegar a obtener unos porcentajes de similitud muy buenos para las recomendaciones.
+	su similitud coseno, se ha podido llegar a obtener unos valores de similitud altos para las recomendaciones.
 
-	El uso de los atributos también ha sido un éxito. El modelo es capaz de filtrar el conjunto de datos y recomendar únicamente las prendas
+	El uso de los atributos también ha permitido al modelo filtrar el conjunto de datos y recomendar únicamente las prendas
 	que contienen estos. Aun así, cuando se usan excesivos atributos juntos o se seleccionan algunos poco comunes, el modelo puede tener problemas
 	recomendando debido al tamaño, no demasiado grande, del conjunto de datos.
 
-	En conclusión, este trabajo ha sido exitoso, ya que ha cumplido a la perfección con los objetivos propuestos, brindando una interfaz limpia que es capaz
-	de servir un sistema de recomendación de imágenes con un gran porcentaje de similitud en las recomendaciones que aporta. Además, se ha podido introducir el uso de
+	La principal limitación de este sistema de recomendación es el número de imágenes en el conjunto de datos. Añadir imágenes a este conjunto es costoso
+	ya que se necesita ayuda de profesionales de la moda que clasifiquen correctamente los atributos de estas antes de añadirlas al conjunto. Además, cada vez
+	que se añadan imágenes al conjunto de datos sería necesario volver a computar los vectores característicos, lo que puede hacer el proceso lento.
+	Otra limitación de este trabajo es la posible falta de comprensión semántica de las imágenes por parte de la red neuronal. Esto puede provocar que en
+	agunos casos las recomendaciones no sean las óptimas. Por último, este sistema cuenta con las limitaciones de no poder usar más de una única imagen como
+	entrada para la recomendación ni permitir hacer una selección de colores deseados en esta.
+
+	En conclusión, este trabajo cumple con los objetivos propuestos, brindando una interfaz que es capaz
+	de servir un sistema de recomendación de imágenes con un alto porcentaje de similitud en las recomendaciones que aporta. Además, se ha podido introducir el uso de
 	atributos, lo cual permite a los usuarios obtener recomendaciones más precisas y ajustadas a sus deseos. Si se contara con un conjunto de
 	datos más grande esta última funcionalidad sería aún más precisa.
 
 	\chapter{Trabajos futuros}
 	
-	El campo de la visión por computadora podría decirse que es relativamente nuevo. Es por ello que hay mucho margen de mejora y se pueden plantear
-	una variedad de futuros trabajos a partir de este. Algunos de ellos son:
-	\begin{itemize}
-		\item Ampliar la base de datos sobre la que se trabaja, ya que a mayor cantidad de datos disponibles mayor será la calidad de las recomendaciones.
-		\item Implementación de una red neuronal más enfocada en la ropa y no tan generalista como la arquitectura VGG16. Entrenar una red que se enfoque en
-		prendas en específico podrá ayudar a obtener mejores recomendaciones.
-		\item Añadir \textit{feedback} de usuarios reales mientras se entrena la red podría ser de gran utilidad, ya que la calidad de las recomendaciones es muchas veces
-		subjetiva al gusto del usuario.
-		\item Posibilidad de utilizar la cámara del dispositivo desde el que se acceda a la aplicación web con el fin de hacer más fácil la recomendación
-		\item Permitir al usuario dar más de una imagen para obtener resultados conjuntos
-		\item Permitir al usuario elegir los colores de la recomendación
-	\end{itemize}
+	Este trabajo tiene mucho margen de mejora y se pueden plantear
+	una variedad de futuros trabajos a partir de este.
+
+	En primer lugar, se puede Ampliar la base de datos sobre la que se trabaja, ya que a mayor cantidad de datos disponibles mayor será la calidad de 
+	las recomendaciones. Esto ayudaría a corregir la limitación que se comentó en las conclusiones. Además, se podría llevar a cabo la
+	implementación de una red neuronal más enfocada en la ropa y no tan generalista como la arquitectura VGG16. Entrenar una red que se centre en
+	prendas en específico podrá ayudar a obtener mejores recomendaciones. 
+
+	Con el fin de resolver la limitación de la falta de comprensión semántica de la red neuronal al extraer las carcterísticas de la imagen se podría añadir
+	\textit{feedback} de usuarios reales durante el entrenamiento de la red. Esto podría ser de gran utilidad, ya que la calidad de las recomendaciones es muchas veces
+	es subjetiva al gusto del usuario. 
+	
+	Otro posible trabajo futuro es permitir la posibilidad al usuario de utilizar la cámara del dispositivo desde el que se acceda a la aplicación web, 
+	en lugar de tener que subir una foto ya hecha, para así hacer más fácil el uso de la interfaz. Además, se podría permitir subir varias imagenes,
+	en lugar de solo una, para obtener resultados conjuntos. Por último, sería de gran utilidad permitir a los usuarios seleccionar los colores que desean
+	obtener en sus recomendaciones.
+
 
 	\chapter{Planificación y presupuestos}
 
@@ -1273,7 +1294,7 @@ hmargin=3cm
 				\toprule
 				\textbf{Concepto} & \textbf{Coste total (€)} & \textbf{Horas de uso} & \textbf{Tiempo de vida} & \textbf{Coste imputable (€)}\\
 				\midrule
-				Ordenador de sobremesa & 450 & 80 & 1.200  & 30 \\
+				Sobremesa & 450 & 80 & 1.200  & 30 \\
 				Portátil & 849,25 & 25 & 800  & 26,54 \\
 				Teclado & 95 & No aplica & No aplica  & 95 \\
 				Monitor & 240 & No aplica & No aplica  & 240 \\
@@ -1361,13 +1382,13 @@ These objectives aim to address the presented problem, resulting in a graphical 
 
 \section*{ Legal framework}
 
-For the execution of this project, a set of images from the competition "iMaterialist (Fashion) 2020 at FGVC7" [2] is utilized. These images contain real people's faces, so it is necessary to consider the Organic Law 3/2018 of December 5, regarding the Protection of Personal Data and the guarantee of digital rights [3]. Nonetheless, the dataset has been appropriately cited. For the same reason, attention must be paid to the Intellectual Property Law [4]. Furthermore, if we regard this as a research work, it would be necessary to take into account the Law 14/2011 of June 1, regarding Science, Technology, and Innovation [5].
+For the execution of this project, a set of images from the competition "iMaterialist (Fashion) 2020 at FGVC7" \cite{imaterialist} is utilized. These images contain real people's faces, so it is necessary to consider the Organic Law 3/2018 of December 5, regarding the Protection of Personal Data and the guarantee of digital rights \cite{ley-proteccion-datos}. Nonetheless, the dataset has been appropriately cited. For the same reason, attention must be paid to the Intellectual Property Law \cite{ley-propiedad-intelectual}. Furthermore, if we regard this as a research work, it would be necessary to take into account the Law 14/2011 of June 1, regarding Science, Technology, and Innovation \cite{ley-tecnologia}.
 
 The tools used for the development of this project are open-source and freely available, such as Python, Visual Studio Code, Tensorflow, Keras, and React.
 
 \section*{Socio-economic framework}
 
-As mentioned previously in the motivation section, the fashion industry is one of the largest on a global scale. It generates significant interest and constitutes 2.8\% of the Spanish GDP and 4\% of the labor market [6]. This is why a fashion recommendation system holds great interest and social impact. Some of the benefits are as follows, according to Alma Muñoz's article ``How recommendation systems can help you achieve more sales'' [7]:
+As mentioned previously in the motivation section, the fashion industry is one of the largest on a global scale. It generates significant interest and constitutes 2.8\% of the Spanish GDP and 4\% of the labor market \cite{estadisticas-moda}. This is why a fashion recommendation system holds great interest and social impact. Some of the benefits are as follows, according to Alma Muñoz's article ``How recommendation systems can help you achieve more sales'' \cite{alma}:
 \begin{itemize}
 	\item ``Between 15\% and 45\% increase in conversions.''
 	\item ``25\% average increase in the average purchase value.''
@@ -1421,11 +1442,11 @@ Convolutional neural networks are the ones used for computer vision tasks. These
 There are several types of convolutional neural networks, including AlexNet, GoogleNet, ResNet, ZFNet, and VGGNet. For the completion of this project, the latter has been chosen.
 
 \section*{Characteristics extraction}
-For feature extraction, the VGG16 architecture has been chosen. This architecture was proposed by Karen Simonyan and Andrew Zisserman in the article titled ``VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION'' [10].
+For feature extraction, the VGG16 architecture has been chosen. This architecture was proposed by Karen Simonyan and Andrew Zisserman in the article titled ``VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION'' \cite{vgg16-paper}.
 
 This model achieved a 92.7\% accuracy on the ``ImageNet'' dataset, which contains over fourteen million images. It is one of the most popular models for working with feature extraction in images. It is highly useful for classifying images or, in the case of this project, calculating similarity between them.
 
-The VGG16 architecture has been selected for several reasons. Firstly, it is extensively documented and easily accessible through \textit{Python} libraries. Despite being a simpler architecture than other options, it has been proven to have excellent performance in tasks related to computer vision, making it a solid choice for an image recommendation system. Furthermore, this architecture demonstrated its effectiveness in the article titled ``Image-based Product Recommendation System with Convolutional Neural Networks'' [12].
+The VGG16 architecture has been selected for several reasons. Firstly, it is extensively documented and easily accessible through \textit{Python} libraries. Despite being a simpler architecture than other options, it has been proven to have excellent performance in tasks related to computer vision, making it a solid choice for an image recommendation system. Furthermore, this architecture demonstrated its effectiveness in the article titled ``Image-based Product Recommendation System with Convolutional Neural Networks'' \cite{image-based-paper}.
 \section*{Images segmentation}
 When it comes to image segmentation, U2-Net stands out as the chosen architecture. Presented by researchers from a Canadian university in the year 2020, this architecture has rapidly gained prominence in the field of computer vision due to its high effectiveness.
 
@@ -1436,14 +1457,14 @@ U2-Net is a leading architecture in the realm of image segmentation. Furthermore
 There are many previous works similar to this one. Among them, the following stand out:
 
 \begin{itemize}
-	\item ``Image-based Product Recommendation System with Convolutional Neural Networks'' [10]. This article describes the techniques used to create a recommendation system for online stores based on image similarity. The SVG, AlexNet, and VGG algorithms are tested. After evaluating all three, the latter proves to be the most accurate. Once image vectors are obtained, cosine distance is calculated between them to measure similarity.
-	\item ``Image-Based Service Recommendation System: A JPEG-Coefficient RFs Approach'' [11]. This article consists of two phases. In the first phase, they classify images according to the type of product, while in the second, a recommendation system is created to find products most similar to a given one. For the second phase, which applies in our case, JPEG coefficients are used to extract image features. Subsequently, Euclidean distance is calculated between these coefficients.
+	\item ``Image-based Product Recommendation System with Convolutional Neural Networks'' \cite{stanford-paper}. This article describes the techniques used to create a recommendation system for online stores based on image similarity. The SVG, AlexNet, and VGG algorithms are tested. After evaluating all three, the latter proves to be the most accurate. Once image vectors are obtained, cosine distance is calculated between them to measure similarity.
+	\item ``Image-Based Service Recommendation System: A JPEG-Coefficient RFs Approach'' \cite{image-based-paper}. This article consists of two phases. In the first phase, they classify images according to the type of product, while in the second, a recommendation system is created to find products most similar to a given one. For the second phase, which applies in our case, JPEG coefficients are used to extract image features. Subsequently, Euclidean distance is calculated between these coefficients.
 \end{itemize}
 This work differs in several aspects from the aforementioned ones. Not only does it seek recommendations based on an initial image, but it also allows users to select attributes they want the recommended images to have. In addition to this primary difference, this project goes beyond a mere model; it also includes a graphical interface that enables users to utilize the model.
 
 \section*{System's design}
 \section*{Dataset}
-As mentioned in the ``Regulatory Framework'' section, this work utilizes the dataset ``iMaterialist (Fashion) 2020 at FGVC7'' [2]. This dataset consists of several files, which are explained below.
+As mentioned in the ``Regulatory Framework'' section, this work utilizes the dataset ``iMaterialist (Fashion) 2020 at FGVC7'' \cite{imaterialist}. This dataset consists of several files, which are explained below.
 
 Firstly, there are two sets of images: ``train'' and ``test''. The ``train'' set comprises 43,793 images, while the ``test'' set contains 3,200 images. Both sets include these images labeled with an identifier.
 Additionally, there is a file named ``train.csv'' that contains the following fields:
@@ -1475,7 +1496,7 @@ However, this is not sufficient, as the user provides an image that is not in th
 
 Ultimately, the decision is made to use the U2-Net architecture, which encompasses all the advantages of U-Net and is additionally tailored for mask creation. This architecture demonstrates high accuracy even when dealing with high-resolution images, making it a strong candidate for fashion image segmentation.
 
-U2-Net originated in 2020 at the University of Alberta, Canada, with the publication of the article ``U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection'' [12]. This article received recognition in 2020 as the best in pattern recognition.
+U2-Net originated in 2020 at the University of Alberta, Canada, with the publication of the article ``U2-Net: Going Deeper with Nested U-Structure for Salient Object Detection'' \cite{u2net}. This article received recognition in 2020 as the best in pattern recognition.
 
 \section*{Reccomendation algorithm}
 The next step involves extracting features from all the images. To achieve this, a convolutional neural network is employed. As mentioned earlier, the decision has been made to use the VGG16 model. This model has an easily comprehensible structure and is deeper than its predecessors, such as AlexNet, enabling the extraction of more complex features.
